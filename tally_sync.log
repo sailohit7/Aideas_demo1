@@ -1,0 +1,846 @@
+2025-09-14 08:40:49,447 [WARNING] Failed SQL connection to LOHITH\\SQLEXPRESS: ('08001', '[08001] [Microsoft][ODBC Driver 17 for SQL Server]SQL Server Network Interfaces: Error Locating Server/Instance Specified [xFFFFFFFF].  (-1) (SQLDriverConnect); [08001] [Microsoft][ODBC Driver 17 for SQL Server]Login timeout expired (0); [08001] [Microsoft][ODBC Driver 17 for SQL Server]A network-related or instance-specific error has occurred while establishing a connection to SQL Server. Server is not found or not accessible. Check if instance name is correct and if SQL Server is configured to allow remote connections. For more information see SQL Server Books Online. (-1)')
+2025-09-14 08:40:49,610 [INFO] Connected to SQL Server: 127.0.0.1,1433
+2025-09-14 08:40:49,610 [INFO] Fetching Ledger...
+2025-09-14 08:40:49,674 [INFO] Ledger: Licensed mode (full fields)
+2025-09-14 08:40:49,799 [INFO] Upserted 11 rows into Ledger
+2025-09-14 08:40:49,800 [INFO] Fetching Group...
+2025-09-14 08:40:49,809 [INFO] Group: Licensed mode (full fields)
+2025-09-14 08:40:49,809 [ERROR] Parse error: not well-formed (invalid token): line 52, column 36
+2025-09-14 08:40:49,814 [WARNING] Empty DataFrame for Group, skipping.
+2025-09-14 08:40:49,815 [INFO] Sync complete.
+2025-09-14 08:46:48,133 [WARNING] Failed SQL connection to LOHITH\\SQLEXPRESS: ('08001', '[08001] [Microsoft][ODBC Driver 17 for SQL Server]SQL Server Network Interfaces: Error Locating Server/Instance Specified [xFFFFFFFF].  (-1) (SQLDriverConnect); [08001] [Microsoft][ODBC Driver 17 for SQL Server]Login timeout expired (0); [08001] [Microsoft][ODBC Driver 17 for SQL Server]A network-related or instance-specific error has occurred while establishing a connection to SQL Server. Server is not found or not accessible. Check if instance name is correct and if SQL Server is configured to allow remote connections. For more information see SQL Server Books Online. (-1)')
+2025-09-14 08:46:48,196 [INFO] Connected to SQL Server: 127.0.0.1,1433
+2025-09-14 08:46:48,197 [INFO] Fetching Ledger...
+2025-09-14 08:46:48,207 [INFO] Ledger: Licensed mode (full fields)
+2025-09-14 08:46:48,260 [INFO] Upserted 11 rows into Ledger
+2025-09-14 08:46:48,261 [INFO] Fetching Group...
+2025-09-14 08:46:48,265 [INFO] Group: Licensed mode (full fields)
+2025-09-14 08:46:48,265 [ERROR] Parse error: not well-formed (invalid token): line 52, column 36
+2025-09-14 08:46:48,269 [WARNING] Empty DataFrame for Group, skipping.
+2025-09-14 08:46:48,269 [INFO] Sync complete.
+2025-09-14 08:49:43,444 [WARNING] Failed SQL connection to LOHITH\\SQLEXPRESS: ('08001', '[08001] [Microsoft][ODBC Driver 17 for SQL Server]SQL Server Network Interfaces: Error Locating Server/Instance Specified [xFFFFFFFF].  (-1) (SQLDriverConnect); [08001] [Microsoft][ODBC Driver 17 for SQL Server]Login timeout expired (0); [08001] [Microsoft][ODBC Driver 17 for SQL Server]A network-related or instance-specific error has occurred while establishing a connection to SQL Server. Server is not found or not accessible. Check if instance name is correct and if SQL Server is configured to allow remote connections. For more information see SQL Server Books Online. (-1)')
+2025-09-14 08:49:43,489 [INFO] Connected to SQL Server: 127.0.0.1,1433
+2025-09-14 08:49:43,489 [INFO] Fetching Ledger...
+2025-09-14 08:49:43,499 [INFO] Ledger: Licensed mode (full fields)
+2025-09-14 08:49:43,519 [INFO] Upserted 11 rows into Ledger
+2025-09-14 08:49:43,519 [INFO] Fetching Group...
+2025-09-14 08:49:43,525 [INFO] Group: Licensed mode (full fields)
+2025-09-14 08:49:43,525 [ERROR] Parse error: not well-formed (invalid token): line 52, column 36
+2025-09-14 08:49:43,527 [WARNING] Empty DataFrame for Group, skipping.
+2025-09-14 08:49:43,527 [INFO] Sync complete.
+2025-09-14 08:51:25,300 [WARNING] Failed SQL connection to LOHITH\\SQLEXPRESS: ('08001', '[08001] [Microsoft][ODBC Driver 17 for SQL Server]SQL Server Network Interfaces: Error Locating Server/Instance Specified [xFFFFFFFF].  (-1) (SQLDriverConnect); [08001] [Microsoft][ODBC Driver 17 for SQL Server]Login timeout expired (0); [08001] [Microsoft][ODBC Driver 17 for SQL Server]A network-related or instance-specific error has occurred while establishing a connection to SQL Server. Server is not found or not accessible. Check if instance name is correct and if SQL Server is configured to allow remote connections. For more information see SQL Server Books Online. (-1)')
+2025-09-14 08:51:25,383 [INFO] Connected to SQL Server: 127.0.0.1,1433
+2025-09-14 08:51:25,384 [INFO] Fetching Ledger...
+2025-09-14 08:51:25,400 [INFO] Ledger: Licensed mode (full fields)
+2025-09-14 08:51:25,448 [INFO] Upserted 11 rows into Ledger
+2025-09-14 08:51:25,448 [INFO] Fetching Group...
+2025-09-14 08:51:25,455 [INFO] Group: Licensed mode (full fields)
+2025-09-14 08:52:32,488 [WARNING] Failed SQL connection to LOHITH\\SQLEXPRESS: ('08001', '[08001] [Microsoft][ODBC Driver 17 for SQL Server]SQL Server Network Interfaces: Error Locating Server/Instance Specified [xFFFFFFFF].  (-1) (SQLDriverConnect); [08001] [Microsoft][ODBC Driver 17 for SQL Server]Login timeout expired (0); [08001] [Microsoft][ODBC Driver 17 for SQL Server]A network-related or instance-specific error has occurred while establishing a connection to SQL Server. Server is not found or not accessible. Check if instance name is correct and if SQL Server is configured to allow remote connections. For more information see SQL Server Books Online. (-1)')
+2025-09-14 08:52:32,548 [INFO] Connected to SQL Server: 127.0.0.1,1433
+2025-09-14 08:52:32,548 [INFO] Fetching Ledger...
+2025-09-14 08:52:32,562 [INFO] Ledger: Licensed mode (full fields)
+2025-09-14 08:52:32,602 [INFO] Upserted 11 rows into Ledger
+2025-09-14 08:52:32,602 [INFO] Fetching Group...
+2025-09-14 08:52:32,609 [INFO] Group: Licensed mode (full fields)
+2025-09-14 08:54:56,866 [WARNING] Failed SQL connection to LOHITH\\SQLEXPRESS: ('08001', '[08001] [Microsoft][ODBC Driver 17 for SQL Server]SQL Server Network Interfaces: Error Locating Server/Instance Specified [xFFFFFFFF].  (-1) (SQLDriverConnect); [08001] [Microsoft][ODBC Driver 17 for SQL Server]Login timeout expired (0); [08001] [Microsoft][ODBC Driver 17 for SQL Server]A network-related or instance-specific error has occurred while establishing a connection to SQL Server. Server is not found or not accessible. Check if instance name is correct and if SQL Server is configured to allow remote connections. For more information see SQL Server Books Online. (-1)')
+2025-09-14 08:54:56,916 [INFO] Connected to SQL Server: 127.0.0.1,1433
+2025-09-14 08:54:56,916 [INFO] Fetching Ledger...
+2025-09-14 08:54:56,924 [INFO] Ledger: Licensed mode (full fields)
+2025-09-14 08:54:56,944 [INFO] Upserted 11 rows into Ledger
+2025-09-14 08:54:56,945 [INFO] Fetching Group...
+2025-09-14 08:54:56,950 [INFO] Group: Licensed mode (full fields)
+2025-09-14 08:54:57,012 [INFO] Upserted 29 rows into Group
+2025-09-14 08:54:57,013 [INFO] Sync complete.
+2025-09-14 09:10:19,506 [WARNING] Failed SQL connection to LOHITH\\SQLEXPRESS: ('08001', '[08001] [Microsoft][ODBC Driver 17 for SQL Server]SQL Server Network Interfaces: Error Locating Server/Instance Specified [xFFFFFFFF].  (-1) (SQLDriverConnect); [08001] [Microsoft][ODBC Driver 17 for SQL Server]Login timeout expired (0); [08001] [Microsoft][ODBC Driver 17 for SQL Server]A network-related or instance-specific error has occurred while establishing a connection to SQL Server. Server is not found or not accessible. Check if instance name is correct and if SQL Server is configured to allow remote connections. For more information see SQL Server Books Online. (-1)')
+2025-09-14 09:10:19,580 [INFO] Connected to SQL Server: 127.0.0.1,1433
+2025-09-14 09:10:19,580 [INFO] Fetching Ledger...
+2025-09-14 09:10:19,604 [INFO] Ledger: Licensed mode (full fields)
+2025-09-14 09:10:19,638 [INFO] Upserted 11 rows into Ledger
+2025-09-14 09:10:19,638 [INFO] Fetching Group...
+2025-09-14 09:10:19,646 [INFO] Group: Licensed mode (full fields)
+2025-09-14 09:24:53,260 [WARNING] Failed SQL connection to LOHITH\\SQLEXPRESS: ('08001', '[08001] [Microsoft][ODBC Driver 17 for SQL Server]SQL Server Network Interfaces: Error Locating Server/Instance Specified [xFFFFFFFF].  (-1) (SQLDriverConnect); [08001] [Microsoft][ODBC Driver 17 for SQL Server]Login timeout expired (0); [08001] [Microsoft][ODBC Driver 17 for SQL Server]A network-related or instance-specific error has occurred while establishing a connection to SQL Server. Server is not found or not accessible. Check if instance name is correct and if SQL Server is configured to allow remote connections. For more information see SQL Server Books Online. (-1)')
+2025-09-14 09:24:53,354 [INFO] Connected to SQL Server: 127.0.0.1,1433
+2025-09-14 09:24:53,355 [INFO] Fetching Ledger...
+2025-09-14 09:24:53,388 [INFO] Ledger: Licensed mode (full fields)
+2025-09-14 09:24:53,461 [INFO] Upserted 11 rows into Ledger
+2025-09-14 09:24:53,461 [INFO] Fetching Group...
+2025-09-14 09:24:53,470 [INFO] Group: Licensed mode (full fields)
+2025-09-14 09:24:53,542 [INFO] Upserted 29 rows into Group
+2025-09-14 09:24:53,543 [INFO] Sync complete.
+2025-09-14 09:36:00,673 [WARNING] Failed SQL connection to LOHITH\\SQLEXPRESS: ('08001', '[08001] [Microsoft][ODBC Driver 17 for SQL Server]SQL Server Network Interfaces: Error Locating Server/Instance Specified [xFFFFFFFF].  (-1) (SQLDriverConnect); [08001] [Microsoft][ODBC Driver 17 for SQL Server]Login timeout expired (0); [08001] [Microsoft][ODBC Driver 17 for SQL Server]A network-related or instance-specific error has occurred while establishing a connection to SQL Server. Server is not found or not accessible. Check if instance name is correct and if SQL Server is configured to allow remote connections. For more information see SQL Server Books Online. (-1)')
+2025-09-14 09:36:00,748 [INFO] Connected to SQL Server: 127.0.0.1,1433
+2025-09-14 09:36:00,748 [INFO] Fetching Ledger...
+2025-09-14 09:36:00,775 [INFO] Ledger: Licensed mode (full fields)
+2025-09-14 09:36:00,807 [INFO] Upserted 11 rows into Ledger
+2025-09-14 09:36:00,807 [INFO] Fetching Group...
+2025-09-14 09:36:00,815 [INFO] Group: Licensed mode (full fields)
+2025-09-14 09:37:57,471 [WARNING] Failed SQL connection to LOHITH\\SQLEXPRESS: ('08001', '[08001] [Microsoft][ODBC Driver 17 for SQL Server]SQL Server Network Interfaces: Error Locating Server/Instance Specified [xFFFFFFFF].  (-1) (SQLDriverConnect); [08001] [Microsoft][ODBC Driver 17 for SQL Server]Login timeout expired (0); [08001] [Microsoft][ODBC Driver 17 for SQL Server]A network-related or instance-specific error has occurred while establishing a connection to SQL Server. Server is not found or not accessible. Check if instance name is correct and if SQL Server is configured to allow remote connections. For more information see SQL Server Books Online. (-1)')
+2025-09-14 09:37:57,523 [INFO] Connected to SQL Server: 127.0.0.1,1433
+2025-09-14 09:37:57,523 [INFO] Fetching Ledger...
+2025-09-14 09:37:57,531 [INFO] Ledger: Licensed mode (full fields)
+2025-09-14 09:37:57,550 [INFO] Upserted 11 rows into Ledger
+2025-09-14 09:37:57,550 [INFO] Fetching Group...
+2025-09-14 09:37:57,557 [INFO] Group: Licensed mode (full fields)
+2025-09-14 09:37:57,609 [INFO] Upserted 29 rows into Group
+2025-09-14 09:37:57,609 [INFO] Sync complete.
+2025-09-14 09:51:41,338 [WARNING] Failed SQL connection to LOHITH\\SQLEXPRESS: ('08001', '[08001] [Microsoft][ODBC Driver 17 for SQL Server]SQL Server Network Interfaces: Error Locating Server/Instance Specified [xFFFFFFFF].  (-1) (SQLDriverConnect); [08001] [Microsoft][ODBC Driver 17 for SQL Server]Login timeout expired (0); [08001] [Microsoft][ODBC Driver 17 for SQL Server]A network-related or instance-specific error has occurred while establishing a connection to SQL Server. Server is not found or not accessible. Check if instance name is correct and if SQL Server is configured to allow remote connections. For more information see SQL Server Books Online. (-1)')
+2025-09-14 09:51:41,390 [INFO] Connected to SQL Server: 127.0.0.1,1433
+2025-09-14 09:51:41,390 [INFO] Fetching Ledger...
+2025-09-14 09:51:41,400 [INFO] Ledger: Licensed mode (full fields)
+2025-09-14 09:51:41,421 [INFO] Upserted 11 rows into Ledger
+2025-09-14 09:51:41,421 [INFO] Fetching Group...
+2025-09-14 09:51:41,428 [INFO] Group: Licensed mode (full fields)
+2025-09-14 09:51:41,466 [INFO] Upserted 29 rows into Group
+2025-09-14 09:51:41,466 [INFO] Sync complete.
+2025-09-14 10:32:25,281 [INFO] Connected to SQL Server
+2025-09-14 10:32:25,281 [INFO] Fetching Ledger...
+2025-09-14 10:32:25,305 [INFO] Ledger: Licensed mode (full fields)
+2025-09-14 10:32:25,336 [INFO] Upserted 11 rows into Ledger
+2025-09-14 10:32:25,338 [INFO] Fetching Group...
+2025-09-14 10:32:25,345 [INFO] Group: Licensed mode (full fields)
+2025-09-14 10:32:25,384 [INFO] Upserted 29 rows into Group
+2025-09-14 10:32:25,386 [INFO] Sync complete.
+2025-09-14 10:48:21,961 [INFO] Connected to SQL Server
+2025-09-14 10:48:21,962 [INFO] Fetching Ledger...
+2025-09-14 10:48:21,970 [INFO] Ledger: Licensed mode (full fields)
+2025-09-14 10:48:21,988 [INFO] Upserted 11 rows into Ledger
+2025-09-14 10:48:21,989 [INFO] Fetching Group...
+2025-09-14 10:48:21,994 [INFO] Group: Licensed mode (full fields)
+2025-09-14 10:48:22,043 [INFO] Upserted 29 rows into Group
+2025-09-14 10:48:22,044 [INFO] Sync complete.
+2025-09-14 10:53:35,255 [INFO] Connected to SQL Server
+2025-09-14 10:53:35,257 [INFO] Fetching Ledger...
+2025-09-14 10:53:35,267 [INFO] Ledger: Licensed mode (full fields)
+2025-09-14 10:53:35,351 [INFO] Upserted 13 rows into Ledger
+2025-09-14 10:53:35,351 [INFO] Fetching Group...
+2025-09-14 10:53:35,357 [INFO] Group: Licensed mode (full fields)
+2025-09-14 10:53:35,488 [INFO] Upserted 31 rows into Group
+2025-09-14 10:53:35,488 [INFO] Sync complete.
+2025-09-14 15:23:50,612 [WARNING] Failed SQL connection to LOHITH\\SQLEXPRESS: ('08001', '[08001] [Microsoft][ODBC Driver 17 for SQL Server]SQL Server Network Interfaces: Error Locating Server/Instance Specified [xFFFFFFFF].  (-1) (SQLDriverConnect); [08001] [Microsoft][ODBC Driver 17 for SQL Server]Login timeout expired (0); [08001] [Microsoft][ODBC Driver 17 for SQL Server]A network-related or instance-specific error has occurred while establishing a connection to SQL Server. Server is not found or not accessible. Check if instance name is correct and if SQL Server is configured to allow remote connections. For more information see SQL Server Books Online. (-1)')
+2025-09-14 15:23:50,679 [INFO] Connected to SQL Server: 127.0.0.1,1433
+2025-09-14 15:23:50,679 [INFO] Fetching Ledger...
+2025-09-14 15:23:50,713 [INFO] Ledger: Licensed mode (full fields)
+2025-09-14 15:23:50,713 [INFO] Ledger: Parsed 11 rows
+2025-09-14 15:23:50,714 [INFO] Sample rows:
+   NAME PARENT OPENINGBALANCE
+0  None   None           None
+1  None   None           None
+2  None   None           None
+3  None   None           None
+4  None   None           None
+2025-09-14 15:23:50,763 [INFO] Upserted 11 rows into Ledger
+2025-09-14 15:23:50,764 [INFO] Fetching Group...
+2025-09-14 15:23:50,772 [INFO] Group: Licensed mode (full fields)
+2025-09-14 15:23:50,772 [INFO] Group: Parsed 29 rows
+2025-09-14 15:23:50,772 [INFO] Sample rows:
+   NAME             PARENT ISSUBLEDGER
+0  None     Current Assets        None
+1  None  Loans (Liability)        None
+2  None       &#4; Primary        None
+3  None       &#4; Primary        None
+4  None     Current Assets        None
+2025-09-14 15:23:50,902 [INFO] Upserted 29 rows into Group
+2025-09-14 15:23:50,902 [INFO] Sync complete.
+2025-09-14 16:15:43,318 [WARNING] Failed SQL connection to LOHITH\\SQLEXPRESS: ('08001', '[08001] [Microsoft][ODBC Driver 17 for SQL Server]SQL Server Network Interfaces: Error Locating Server/Instance Specified [xFFFFFFFF].  (-1) (SQLDriverConnect); [08001] [Microsoft][ODBC Driver 17 for SQL Server]Login timeout expired (0); [08001] [Microsoft][ODBC Driver 17 for SQL Server]A network-related or instance-specific error has occurred while establishing a connection to SQL Server. Server is not found or not accessible. Check if instance name is correct and if SQL Server is configured to allow remote connections. For more information see SQL Server Books Online. (-1)')
+2025-09-14 16:15:43,336 [INFO] Connected to SQL Server: 127.0.0.1,1433
+2025-09-14 16:15:43,336 [INFO] Fetching Ledger...
+2025-09-14 16:15:43,357 [INFO] Ledger: Licensed mode (full fields)
+2025-09-14 16:15:43,357 [INFO] Ledger: Parsed 11 rows
+2025-09-14 16:15:43,360 [INFO] Sample rows:
+   NAME PARENT OPENINGBALANCE
+0  None   None           None
+1  None   None           None
+2  None   None           None
+3  None   None           None
+4  None   None           None
+2025-09-14 16:15:43,442 [INFO] Upserted 11 rows into Ledger
+2025-09-14 16:15:43,442 [INFO] Fetching Group...
+2025-09-14 16:15:43,448 [INFO] Group: Licensed mode (full fields)
+2025-09-14 16:15:43,448 [INFO] Group: Parsed 29 rows
+2025-09-14 16:15:43,448 [INFO] Sample rows:
+   NAME             PARENT ISSUBLEDGER
+0  None     Current Assets        None
+1  None  Loans (Liability)        None
+2  None       &#4; Primary        None
+3  None       &#4; Primary        None
+4  None     Current Assets        None
+2025-09-14 16:15:43,502 [INFO] Upserted 29 rows into Group
+2025-09-14 16:15:43,503 [INFO] Sync complete.
+2025-09-14 16:19:32,927 [WARNING] Failed SQL connection to LOHITH\\SQLEXPRESS: ('08001', '[08001] [Microsoft][ODBC Driver 17 for SQL Server]SQL Server Network Interfaces: Error Locating Server/Instance Specified [xFFFFFFFF].  (-1) (SQLDriverConnect); [08001] [Microsoft][ODBC Driver 17 for SQL Server]Login timeout expired (0); [08001] [Microsoft][ODBC Driver 17 for SQL Server]A network-related or instance-specific error has occurred while establishing a connection to SQL Server. Server is not found or not accessible. Check if instance name is correct and if SQL Server is configured to allow remote connections. For more information see SQL Server Books Online. (-1)')
+2025-09-14 16:19:32,987 [INFO] Connected to SQL Server: 127.0.0.1,1433
+2025-09-14 16:19:32,987 [INFO] Fetching Ledger...
+2025-09-14 16:19:32,994 [INFO] Ledger: Licensed mode (full fields)
+2025-09-14 16:19:32,994 [INFO] Ledger: Parsed 11 rows
+2025-09-14 16:19:32,994 [INFO] Sample rows:
+   NAME PARENT OPENINGBALANCE
+0  None   None           None
+1  None   None           None
+2  None   None           None
+3  None   None           None
+4  None   None           None
+2025-09-14 16:19:33,022 [INFO] Upserted 11 rows into Ledger
+2025-09-14 16:19:33,023 [INFO] Fetching Group...
+2025-09-14 16:19:33,030 [INFO] Group: Licensed mode (full fields)
+2025-09-14 16:19:33,030 [INFO] Group: Parsed 29 rows
+2025-09-14 16:19:33,031 [INFO] Sample rows:
+   NAME             PARENT ISSUBLEDGER
+0  None     Current Assets        None
+1  None  Loans (Liability)        None
+2  None       &#4; Primary        None
+3  None       &#4; Primary        None
+4  None     Current Assets        None
+2025-09-14 16:19:33,093 [INFO] Upserted 29 rows into Group
+2025-09-14 16:19:33,093 [INFO] Fetching VoucherType...
+2025-09-14 16:19:33,121 [INFO] VoucherType: Licensed mode (full fields)
+2025-09-14 16:19:33,121 [INFO] VoucherType: Parsed 25 rows
+2025-09-14 16:19:33,122 [INFO] Sample rows:
+   NAME PARENT ISDEEMEDPOSITIVE
+0  None   None             None
+1  None   None             None
+2  None   None             None
+3  None   None             None
+4  None   None             None
+2025-09-14 16:19:33,197 [INFO] Upserted 25 rows into VoucherType
+2025-09-14 16:19:33,198 [INFO] Fetching Currency...
+2025-09-14 16:20:56,778 [ERROR] Tally request failed: ('Connection aborted.', ConnectionResetError(10054, 'An existing connection was forcibly closed by the remote host', None, 10054, None))
+2025-09-14 16:20:56,780 [ERROR] Parse error: no element found: line 1, column 0
+2025-09-14 16:21:00,875 [ERROR] Tally request failed: HTTPConnectionPool(host='localhost', port=9000): Max retries exceeded with url: / (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x0000023B91D75350>: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it'))
+2025-09-14 16:21:00,875 [ERROR] Parse error: no element found: line 1, column 0
+2025-09-14 16:21:00,876 [INFO] Currency: Edu mode (NAME only)
+2025-09-14 16:21:00,876 [INFO] Currency: Parsed 0 rows
+2025-09-14 16:21:00,876 [WARNING] Empty DataFrame for Currency, skipping.
+2025-09-14 16:21:00,876 [INFO] Fetching Budget...
+2025-09-14 16:21:04,923 [ERROR] Tally request failed: HTTPConnectionPool(host='localhost', port=9000): Max retries exceeded with url: / (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x0000023B91D4B410>: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it'))
+2025-09-14 16:21:04,924 [ERROR] Parse error: no element found: line 1, column 0
+2025-09-14 16:21:08,977 [ERROR] Tally request failed: HTTPConnectionPool(host='localhost', port=9000): Max retries exceeded with url: / (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x0000023B91CF7DF0>: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it'))
+2025-09-14 16:21:08,978 [ERROR] Parse error: no element found: line 1, column 0
+2025-09-14 16:21:08,979 [INFO] Budget: Edu mode (NAME only)
+2025-09-14 16:21:08,979 [INFO] Budget: Parsed 0 rows
+2025-09-14 16:21:08,979 [WARNING] Empty DataFrame for Budget, skipping.
+2025-09-14 16:21:08,979 [INFO] Fetching Scenario...
+2025-09-14 16:21:13,031 [ERROR] Tally request failed: HTTPConnectionPool(host='localhost', port=9000): Max retries exceeded with url: / (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x0000023B925FC5A0>: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it'))
+2025-09-14 16:21:13,032 [ERROR] Parse error: no element found: line 1, column 0
+2025-09-14 16:21:17,075 [ERROR] Tally request failed: HTTPConnectionPool(host='localhost', port=9000): Max retries exceeded with url: / (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x0000023B925FC7C0>: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it'))
+2025-09-14 16:21:17,076 [ERROR] Parse error: no element found: line 1, column 0
+2025-09-14 16:21:17,077 [INFO] Scenario: Edu mode (NAME only)
+2025-09-14 16:21:17,077 [INFO] Scenario: Parsed 0 rows
+2025-09-14 16:21:17,077 [WARNING] Empty DataFrame for Scenario, skipping.
+2025-09-14 16:21:17,077 [INFO] Fetching CostCentre...
+2025-09-14 16:21:21,133 [ERROR] Tally request failed: HTTPConnectionPool(host='localhost', port=9000): Max retries exceeded with url: / (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x0000023B925FC9E0>: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it'))
+2025-09-14 16:21:21,133 [ERROR] Parse error: no element found: line 1, column 0
+2025-09-14 16:21:25,220 [ERROR] Tally request failed: HTTPConnectionPool(host='localhost', port=9000): Max retries exceeded with url: / (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x0000023B925FCC00>: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it'))
+2025-09-14 16:21:25,220 [ERROR] Parse error: no element found: line 1, column 0
+2025-09-14 16:21:25,221 [INFO] CostCentre: Edu mode (NAME only)
+2025-09-14 16:21:25,222 [INFO] CostCentre: Parsed 0 rows
+2025-09-14 16:21:25,222 [WARNING] Empty DataFrame for CostCentre, skipping.
+2025-09-14 16:21:25,222 [INFO] Fetching CostCategory...
+2025-09-14 16:21:29,272 [ERROR] Tally request failed: HTTPConnectionPool(host='localhost', port=9000): Max retries exceeded with url: / (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x0000023B925FCE20>: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it'))
+2025-09-14 16:21:29,273 [ERROR] Parse error: no element found: line 1, column 0
+2025-09-14 16:21:33,381 [ERROR] Tally request failed: HTTPConnectionPool(host='localhost', port=9000): Max retries exceeded with url: / (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x0000023B925FD040>: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it'))
+2025-09-14 16:21:33,382 [ERROR] Parse error: no element found: line 1, column 0
+2025-09-14 16:21:33,383 [INFO] CostCategory: Edu mode (NAME only)
+2025-09-14 16:21:33,383 [INFO] CostCategory: Parsed 0 rows
+2025-09-14 16:21:33,384 [WARNING] Empty DataFrame for CostCategory, skipping.
+2025-09-14 16:21:33,384 [INFO] Fetching StockGroup...
+2025-09-14 16:21:37,456 [ERROR] Tally request failed: HTTPConnectionPool(host='localhost', port=9000): Max retries exceeded with url: / (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x0000023B91CF7AC0>: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it'))
+2025-09-14 16:21:37,456 [ERROR] Parse error: no element found: line 1, column 0
+2025-09-14 16:21:41,545 [ERROR] Tally request failed: HTTPConnectionPool(host='localhost', port=9000): Max retries exceeded with url: / (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x0000023B91CF7BD0>: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it'))
+2025-09-14 16:21:41,546 [ERROR] Parse error: no element found: line 1, column 0
+2025-09-14 16:21:41,547 [INFO] StockGroup: Edu mode (NAME only)
+2025-09-14 16:21:41,547 [INFO] StockGroup: Parsed 0 rows
+2025-09-14 16:21:41,547 [WARNING] Empty DataFrame for StockGroup, skipping.
+2025-09-14 16:21:41,547 [INFO] Fetching StockCategory...
+2025-09-14 16:21:45,657 [ERROR] Tally request failed: HTTPConnectionPool(host='localhost', port=9000): Max retries exceeded with url: / (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x0000023B91CF7F00>: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it'))
+2025-09-14 16:21:45,657 [ERROR] Parse error: no element found: line 1, column 0
+2025-09-14 16:21:49,739 [ERROR] Tally request failed: HTTPConnectionPool(host='localhost', port=9000): Max retries exceeded with url: / (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x0000023B91CF7460>: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it'))
+2025-09-14 16:21:49,739 [ERROR] Parse error: no element found: line 1, column 0
+2025-09-14 16:21:49,740 [INFO] StockCategory: Edu mode (NAME only)
+2025-09-14 16:21:49,740 [INFO] StockCategory: Parsed 0 rows
+2025-09-14 16:21:49,741 [WARNING] Empty DataFrame for StockCategory, skipping.
+2025-09-14 16:21:49,741 [INFO] Fetching StockItem...
+2025-09-14 16:21:53,831 [ERROR] Tally request failed: HTTPConnectionPool(host='localhost', port=9000): Max retries exceeded with url: / (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x0000023B91CF7790>: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it'))
+2025-09-14 16:21:53,831 [ERROR] Parse error: no element found: line 1, column 0
+2025-09-14 16:21:57,388 [INFO] StockItem: Edu mode (NAME only)
+2025-09-14 16:21:57,388 [INFO] StockItem: Parsed 0 rows
+2025-09-14 16:21:57,388 [WARNING] Empty DataFrame for StockItem, skipping.
+2025-09-14 16:21:57,388 [INFO] Fetching Unit...
+2025-09-14 16:22:01,012 [ERROR] Tally request failed: ('Connection aborted.', ConnectionResetError(10054, 'An existing connection was forcibly closed by the remote host', None, 10054, None))
+2025-09-14 16:22:01,013 [ERROR] Parse error: no element found: line 1, column 0
+2025-09-14 16:22:05,070 [ERROR] Tally request failed: HTTPConnectionPool(host='localhost', port=9000): Max retries exceeded with url: / (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x0000023B91CF7130>: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it'))
+2025-09-14 16:22:05,071 [ERROR] Parse error: no element found: line 1, column 0
+2025-09-14 16:22:05,072 [INFO] Unit: Edu mode (NAME only)
+2025-09-14 16:22:05,072 [INFO] Unit: Parsed 0 rows
+2025-09-14 16:22:05,073 [WARNING] Empty DataFrame for Unit, skipping.
+2025-09-14 16:22:05,073 [INFO] Fetching Godown...
+2025-09-14 16:22:09,130 [ERROR] Tally request failed: HTTPConnectionPool(host='localhost', port=9000): Max retries exceeded with url: / (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x0000023B91CF7350>: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it'))
+2025-09-14 16:22:09,130 [ERROR] Parse error: no element found: line 1, column 0
+2025-09-14 16:22:13,189 [ERROR] Tally request failed: HTTPConnectionPool(host='localhost', port=9000): Max retries exceeded with url: / (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x0000023B91CF6F10>: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it'))
+2025-09-14 16:22:13,190 [ERROR] Parse error: no element found: line 1, column 0
+2025-09-14 16:22:13,191 [INFO] Godown: Edu mode (NAME only)
+2025-09-14 16:22:13,191 [INFO] Godown: Parsed 0 rows
+2025-09-14 16:22:13,191 [WARNING] Empty DataFrame for Godown, skipping.
+2025-09-14 16:22:13,191 [INFO] Fetching Batch...
+2025-09-14 16:22:17,274 [ERROR] Tally request failed: HTTPConnectionPool(host='localhost', port=9000): Max retries exceeded with url: / (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x0000023B925FCE20>: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it'))
+2025-09-14 16:22:17,274 [ERROR] Parse error: no element found: line 1, column 0
+2025-09-14 16:22:21,341 [ERROR] Tally request failed: HTTPConnectionPool(host='localhost', port=9000): Max retries exceeded with url: / (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x0000023B925FCC00>: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it'))
+2025-09-14 16:22:21,341 [ERROR] Parse error: no element found: line 1, column 0
+2025-09-14 16:22:21,342 [INFO] Batch: Edu mode (NAME only)
+2025-09-14 16:22:21,343 [INFO] Batch: Parsed 0 rows
+2025-09-14 16:22:21,343 [WARNING] Empty DataFrame for Batch, skipping.
+2025-09-14 16:22:21,343 [INFO] Fetching EmployeeGroup...
+2025-09-14 16:22:25,400 [ERROR] Tally request failed: HTTPConnectionPool(host='localhost', port=9000): Max retries exceeded with url: / (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x0000023B925FC9E0>: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it'))
+2025-09-14 16:22:25,401 [ERROR] Parse error: no element found: line 1, column 0
+2025-09-14 16:22:29,491 [ERROR] Tally request failed: HTTPConnectionPool(host='localhost', port=9000): Max retries exceeded with url: / (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x0000023B925FC7C0>: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it'))
+2025-09-14 16:22:29,491 [ERROR] Parse error: no element found: line 1, column 0
+2025-09-14 16:22:29,492 [INFO] EmployeeGroup: Edu mode (NAME only)
+2025-09-14 16:22:29,492 [INFO] EmployeeGroup: Parsed 0 rows
+2025-09-14 16:22:29,493 [WARNING] Empty DataFrame for EmployeeGroup, skipping.
+2025-09-14 16:22:29,493 [INFO] Fetching Employee...
+2025-09-14 16:22:33,529 [ERROR] Tally request failed: HTTPConnectionPool(host='localhost', port=9000): Max retries exceeded with url: / (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x0000023B925FC050>: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it'))
+2025-09-14 16:22:33,530 [ERROR] Parse error: no element found: line 1, column 0
+2025-09-14 16:22:37,614 [ERROR] Tally request failed: HTTPConnectionPool(host='localhost', port=9000): Max retries exceeded with url: / (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x0000023B91CF6F10>: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it'))
+2025-09-14 16:22:37,614 [ERROR] Parse error: no element found: line 1, column 0
+2025-09-14 16:22:37,615 [INFO] Employee: Edu mode (NAME only)
+2025-09-14 16:22:37,615 [INFO] Employee: Parsed 0 rows
+2025-09-14 16:22:37,615 [WARNING] Empty DataFrame for Employee, skipping.
+2025-09-14 16:22:37,616 [INFO] Fetching AttendanceType...
+2025-09-14 16:22:41,656 [ERROR] Tally request failed: HTTPConnectionPool(host='localhost', port=9000): Max retries exceeded with url: / (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x0000023B91CF7350>: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it'))
+2025-09-14 16:22:41,656 [ERROR] Parse error: no element found: line 1, column 0
+2025-09-14 16:22:45,718 [ERROR] Tally request failed: HTTPConnectionPool(host='localhost', port=9000): Max retries exceeded with url: / (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x0000023B91CF7130>: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it'))
+2025-09-14 16:22:45,718 [ERROR] Parse error: no element found: line 1, column 0
+2025-09-14 16:22:45,719 [INFO] AttendanceType: Edu mode (NAME only)
+2025-09-14 16:22:45,719 [INFO] AttendanceType: Parsed 0 rows
+2025-09-14 16:22:45,719 [WARNING] Empty DataFrame for AttendanceType, skipping.
+2025-09-14 16:22:45,719 [INFO] Fetching PayHead...
+2025-09-14 16:22:49,818 [ERROR] Tally request failed: HTTPConnectionPool(host='localhost', port=9000): Max retries exceeded with url: / (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x0000023B91CF6BE0>: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it'))
+2025-09-14 16:22:49,819 [ERROR] Parse error: no element found: line 1, column 0
+2025-09-14 16:22:53,888 [ERROR] Tally request failed: HTTPConnectionPool(host='localhost', port=9000): Max retries exceeded with url: / (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x0000023B91CF7790>: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it'))
+2025-09-14 16:22:53,889 [ERROR] Parse error: no element found: line 1, column 0
+2025-09-14 16:22:53,890 [INFO] PayHead: Edu mode (NAME only)
+2025-09-14 16:22:53,890 [INFO] PayHead: Parsed 0 rows
+2025-09-14 16:22:53,890 [WARNING] Empty DataFrame for PayHead, skipping.
+2025-09-14 16:22:53,890 [INFO] Fetching Company...
+2025-09-14 16:22:57,927 [ERROR] Tally request failed: HTTPConnectionPool(host='localhost', port=9000): Max retries exceeded with url: / (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x0000023B91CF7460>: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it'))
+2025-09-14 16:22:57,928 [ERROR] Parse error: no element found: line 1, column 0
+2025-09-14 16:23:01,985 [ERROR] Tally request failed: HTTPConnectionPool(host='localhost', port=9000): Max retries exceeded with url: / (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x0000023B91CF7F00>: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it'))
+2025-09-14 16:23:01,985 [ERROR] Parse error: no element found: line 1, column 0
+2025-09-14 16:23:01,986 [INFO] Company: Edu mode (NAME only)
+2025-09-14 16:23:01,986 [INFO] Company: Parsed 0 rows
+2025-09-14 16:23:01,987 [WARNING] Empty DataFrame for Company, skipping.
+2025-09-14 16:23:01,987 [INFO] Sync complete.
+2025-09-14 17:19:16,863 [WARNING] Failed SQL connection to LOHITH\\SQLEXPRESS: ('08001', '[08001] [Microsoft][ODBC Driver 17 for SQL Server]SQL Server Network Interfaces: Error Locating Server/Instance Specified [xFFFFFFFF].  (-1) (SQLDriverConnect); [08001] [Microsoft][ODBC Driver 17 for SQL Server]Login timeout expired (0); [08001] [Microsoft][ODBC Driver 17 for SQL Server]A network-related or instance-specific error has occurred while establishing a connection to SQL Server. Server is not found or not accessible. Check if instance name is correct and if SQL Server is configured to allow remote connections. For more information see SQL Server Books Online. (-1)')
+2025-09-14 17:19:16,905 [INFO] Connected to SQL Server: 127.0.0.1,1433
+2025-09-14 17:19:16,906 [INFO] Fetching Ledger...
+2025-09-14 17:19:16,914 [INFO] Ledger: Licensed mode (full fields)
+2025-09-14 17:19:16,915 [INFO] Ledger: Parsed 11 rows
+2025-09-14 17:19:16,915 [INFO] Sample rows:
+   NAME PARENT OPENINGBALANCE
+0  None   None           None
+1  None   None           None
+2  None   None           None
+3  None   None           None
+4  None   None           None
+2025-09-14 17:19:16,947 [INFO] Upserted 11 rows into Ledger
+2025-09-14 17:19:16,948 [INFO] Fetching Group...
+2025-09-14 17:19:16,956 [INFO] Group: Licensed mode (full fields)
+2025-09-14 17:19:16,956 [INFO] Group: Parsed 29 rows
+2025-09-14 17:19:16,957 [INFO] Sample rows:
+   NAME             PARENT ISSUBLEDGER
+0  None     Current Assets        None
+1  None  Loans (Liability)        None
+2  None       &#4; Primary        None
+3  None       &#4; Primary        None
+4  None     Current Assets        None
+2025-09-14 17:19:17,015 [INFO] Upserted 29 rows into Group
+2025-09-14 17:19:17,015 [INFO] Sync complete.
+2025-09-14 17:22:37,478 [WARNING] Failed SQL connection to LOHITH\\SQLEXPRESS: ('08001', '[08001] [Microsoft][ODBC Driver 17 for SQL Server]SQL Server Network Interfaces: Error Locating Server/Instance Specified [xFFFFFFFF].  (-1) (SQLDriverConnect); [08001] [Microsoft][ODBC Driver 17 for SQL Server]Login timeout expired (0); [08001] [Microsoft][ODBC Driver 17 for SQL Server]A network-related or instance-specific error has occurred while establishing a connection to SQL Server. Server is not found or not accessible. Check if instance name is correct and if SQL Server is configured to allow remote connections. For more information see SQL Server Books Online. (-1)')
+2025-09-14 17:22:37,535 [INFO] Connected to SQL Server: 127.0.0.1,1433
+2025-09-14 17:22:45,225 [INFO] Connected to database master on server 127.0.0.1,1433
+2025-09-14 17:22:46,721 [INFO] Fetching Ledger...
+2025-09-14 17:22:46,729 [INFO] Ledger: Licensed mode
+2025-09-14 17:22:46,729 [INFO] Ledger: Parsed 11 rows
+2025-09-14 17:22:46,770 [INFO] Upserted 11 rows into Ledger
+2025-09-14 17:22:46,770 [INFO] Sync complete.
+2025-09-14 17:24:02,581 [WARNING] Failed SQL connection to LOHITH\\SQLEXPRESS: ('08001', '[08001] [Microsoft][ODBC Driver 17 for SQL Server]SQL Server Network Interfaces: Error Locating Server/Instance Specified [xFFFFFFFF].  (-1) (SQLDriverConnect); [08001] [Microsoft][ODBC Driver 17 for SQL Server]Login timeout expired (0); [08001] [Microsoft][ODBC Driver 17 for SQL Server]A network-related or instance-specific error has occurred while establishing a connection to SQL Server. Server is not found or not accessible. Check if instance name is correct and if SQL Server is configured to allow remote connections. For more information see SQL Server Books Online. (-1)')
+2025-09-14 17:24:02,626 [INFO] Connected to SQL Server: 127.0.0.1,1433
+2025-09-14 17:24:13,685 [INFO] Database onepiece created.
+2025-09-14 17:24:13,723 [INFO] Connected to database onepiece on server 127.0.0.1,1433
+2025-09-14 17:24:35,556 [INFO] Fetching Budget...
+2025-09-14 17:24:35,568 [INFO] Budget: Edu mode (NAME only)
+2025-09-14 17:24:35,568 [INFO] Budget: Parsed 0 rows
+2025-09-14 17:24:35,568 [WARNING] Empty DataFrame for Budget, skipping.
+2025-09-14 17:24:35,568 [INFO] Sync complete.
+2025-09-14 17:26:19,181 [WARNING] Failed SQL connection to LOHITH\\SQLEXPRESS: ('08001', '[08001] [Microsoft][ODBC Driver 17 for SQL Server]SQL Server Network Interfaces: Error Locating Server/Instance Specified [xFFFFFFFF].  (-1) (SQLDriverConnect); [08001] [Microsoft][ODBC Driver 17 for SQL Server]Login timeout expired (0); [08001] [Microsoft][ODBC Driver 17 for SQL Server]A network-related or instance-specific error has occurred while establishing a connection to SQL Server. Server is not found or not accessible. Check if instance name is correct and if SQL Server is configured to allow remote connections. For more information see SQL Server Books Online. (-1)')
+2025-09-14 17:26:21,265 [INFO] Connected to SQL Server: 127.0.0.1,1433
+2025-09-14 17:26:29,441 [INFO] Connected to database onepiece on server 127.0.0.1,1433
+2025-09-14 17:26:35,395 [INFO] Fetching VoucherType...
+2025-09-14 17:26:35,404 [INFO] VoucherType: Licensed mode
+2025-09-14 17:26:35,404 [INFO] VoucherType: Parsed 25 rows
+2025-09-14 17:26:35,450 [INFO] Upserted 25 rows into VoucherType
+2025-09-14 17:26:35,450 [INFO] Sync complete.
+2025-09-15 06:39:25,097 [WARNING] Failed SQL connection to LOHITH\\SQLEXPRESS: ('08001', '[08001] [Microsoft][ODBC Driver 17 for SQL Server]SQL Server Network Interfaces: Error Locating Server/Instance Specified [xFFFFFFFF].  (-1) (SQLDriverConnect); [08001] [Microsoft][ODBC Driver 17 for SQL Server]Login timeout expired (0); [08001] [Microsoft][ODBC Driver 17 for SQL Server]A network-related or instance-specific error has occurred while establishing a connection to SQL Server. Server is not found or not accessible. Check if instance name is correct and if SQL Server is configured to allow remote connections. For more information see SQL Server Books Online. (-1)')
+2025-09-15 06:39:25,335 [INFO] Connected to SQL Server: 127.0.0.1,1433
+2025-09-15 06:39:25,335 [INFO] Fetching Ledger...
+2025-09-15 06:39:29,400 [ERROR] Tally request failed: HTTPConnectionPool(host='localhost', port=9000): Max retries exceeded with url: / (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x000002537A3EECF0>: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it'))
+2025-09-15 06:39:29,402 [ERROR] Parse error: no element found: line 1, column 0
+2025-09-15 06:39:33,468 [ERROR] Tally request failed: HTTPConnectionPool(host='localhost', port=9000): Max retries exceeded with url: / (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x000002537A4ED450>: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it'))
+2025-09-15 06:39:33,469 [ERROR] Parse error: no element found: line 1, column 0
+2025-09-15 06:39:33,470 [INFO] Ledger: Edu mode (NAME only)
+2025-09-15 06:39:33,470 [INFO] Ledger: Parsed 0 rows
+2025-09-15 06:39:33,470 [WARNING] Empty DataFrame for Ledger, skipping.
+2025-09-15 06:39:33,470 [INFO] Fetching Group...
+2025-09-15 06:39:37,505 [ERROR] Tally request failed: HTTPConnectionPool(host='localhost', port=9000): Max retries exceeded with url: / (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x000002537A4134D0>: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it'))
+2025-09-15 06:39:37,505 [ERROR] Parse error: no element found: line 1, column 0
+2025-09-15 06:39:52,993 [WARNING] Failed SQL connection to LOHITH\\SQLEXPRESS: ('08001', '[08001] [Microsoft][ODBC Driver 17 for SQL Server]SQL Server Network Interfaces: Error Locating Server/Instance Specified [xFFFFFFFF].  (-1) (SQLDriverConnect); [08001] [Microsoft][ODBC Driver 17 for SQL Server]Login timeout expired (0); [08001] [Microsoft][ODBC Driver 17 for SQL Server]A network-related or instance-specific error has occurred while establishing a connection to SQL Server. Server is not found or not accessible. Check if instance name is correct and if SQL Server is configured to allow remote connections. For more information see SQL Server Books Online. (-1)')
+2025-09-15 06:40:53,319 [WARNING] Failed SQL connection to LOHITH\\SQLEXPRESS: ('08001', '[08001] [Microsoft][ODBC Driver 17 for SQL Server]SQL Server Network Interfaces: Error Locating Server/Instance Specified [xFFFFFFFF].  (-1) (SQLDriverConnect); [08001] [Microsoft][ODBC Driver 17 for SQL Server]Login timeout expired (0); [08001] [Microsoft][ODBC Driver 17 for SQL Server]A network-related or instance-specific error has occurred while establishing a connection to SQL Server. Server is not found or not accessible. Check if instance name is correct and if SQL Server is configured to allow remote connections. For more information see SQL Server Books Online. (-1)')
+2025-09-15 06:40:53,380 [INFO] Connected to SQL Server: 127.0.0.1,1433
+2025-09-15 06:41:12,595 [INFO] Connected to database onepiece on server 127.0.0.1,1433
+2025-09-15 06:41:33,676 [INFO] Fetching Group...
+2025-09-15 06:41:33,696 [INFO] Group: Licensed mode
+2025-09-15 06:41:33,697 [INFO] Group: Parsed 29 rows
+2025-09-15 06:41:33,834 [INFO] Upserted 29 rows into Group
+2025-09-15 06:41:33,834 [INFO] Fetching Ledger...
+2025-09-15 06:41:33,839 [INFO] Ledger: Licensed mode
+2025-09-15 06:41:33,839 [INFO] Ledger: Parsed 11 rows
+2025-09-15 06:41:33,864 [INFO] Upserted 11 rows into Ledger
+2025-09-15 06:41:33,865 [INFO] Fetching StockCategory...
+2025-09-15 06:41:54,300 [ERROR] Tally request failed: ('Connection aborted.', ConnectionResetError(10054, 'An existing connection was forcibly closed by the remote host', None, 10054, None))
+2025-09-15 06:41:54,300 [ERROR] Parse error: no element found: line 1, column 0
+2025-09-15 06:41:58,352 [ERROR] Tally request failed: HTTPConnectionPool(host='localhost', port=9000): Max retries exceeded with url: / (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x00000210ED955220>: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it'))
+2025-09-15 06:41:58,353 [ERROR] Parse error: no element found: line 1, column 0
+2025-09-15 06:41:58,354 [INFO] StockCategory: Edu mode (NAME only)
+2025-09-15 06:41:58,354 [INFO] StockCategory: Parsed 0 rows
+2025-09-15 06:41:58,354 [WARNING] Empty DataFrame for StockCategory, skipping.
+2025-09-15 06:41:58,355 [INFO] Sync complete.
+2025-09-15 06:43:46,074 [WARNING] Failed SQL connection to LOHITH\\SQLEXPRESS: ('08001', '[08001] [Microsoft][ODBC Driver 17 for SQL Server]SQL Server Network Interfaces: Error Locating Server/Instance Specified [xFFFFFFFF].  (-1) (SQLDriverConnect); [08001] [Microsoft][ODBC Driver 17 for SQL Server]Login timeout expired (0); [08001] [Microsoft][ODBC Driver 17 for SQL Server]A network-related or instance-specific error has occurred while establishing a connection to SQL Server. Server is not found or not accessible. Check if instance name is correct and if SQL Server is configured to allow remote connections. For more information see SQL Server Books Online. (-1)')
+2025-09-15 06:43:46,115 [INFO] Connected to SQL Server: 127.0.0.1,1433
+2025-09-15 06:43:52,478 [INFO] Connected to database lohit on server 127.0.0.1,1433
+2025-09-15 06:43:56,745 [INFO] Fetching StockItem...
+2025-09-15 06:43:56,753 [INFO] StockItem: Licensed mode
+2025-09-15 06:43:56,754 [INFO] StockItem: Parsed 1 rows
+2025-09-15 06:43:56,786 [INFO] Upserted 1 rows into StockItem
+2025-09-15 06:43:56,787 [INFO] Sync complete.
+2025-09-15 06:45:34,226 [WARNING] Failed SQL connection to LOHITH\\SQLEXPRESS: ('08001', '[08001] [Microsoft][ODBC Driver 17 for SQL Server]SQL Server Network Interfaces: Error Locating Server/Instance Specified [xFFFFFFFF].  (-1) (SQLDriverConnect); [08001] [Microsoft][ODBC Driver 17 for SQL Server]Login timeout expired (0); [08001] [Microsoft][ODBC Driver 17 for SQL Server]A network-related or instance-specific error has occurred while establishing a connection to SQL Server. Server is not found or not accessible. Check if instance name is correct and if SQL Server is configured to allow remote connections. For more information see SQL Server Books Online. (-1)')
+2025-09-15 06:45:34,261 [INFO] Connected to SQL Server: 127.0.0.1,1433
+2025-09-15 06:54:30,516 [WARNING] Failed SQL connection to LOHITH\\SQLEXPRESS: ('08001', '[08001] [Microsoft][ODBC Driver 17 for SQL Server]SQL Server Network Interfaces: Error Locating Server/Instance Specified [xFFFFFFFF].  (-1) (SQLDriverConnect); [08001] [Microsoft][ODBC Driver 17 for SQL Server]Login timeout expired (0); [08001] [Microsoft][ODBC Driver 17 for SQL Server]A network-related or instance-specific error has occurred while establishing a connection to SQL Server. Server is not found or not accessible. Check if instance name is correct and if SQL Server is configured to allow remote connections. For more information see SQL Server Books Online. (-1)')
+2025-09-15 06:54:30,636 [INFO] Connected to SQL Server: 127.0.0.1,1433
+2025-09-15 06:54:38,758 [INFO] Connected to database master on server 127.0.0.1,1433
+2025-09-15 06:54:44,048 [INFO] Fetching VoucherType...
+2025-09-15 06:54:44,127 [INFO] VoucherType: Licensed mode (full fields)
+2025-09-15 06:54:44,127 [INFO] VoucherType: Parsed 25 rows
+2025-09-15 06:54:44,128 [INFO] Sample rows:
+   NAME PARENT NUMBERINGMETHOD
+0  None   None            None
+1  None   None            None
+2  None   None            None
+3  None   None            None
+4  None   None            None
+2025-09-15 06:54:44,211 [INFO] Upserted 25 rows into VoucherType
+2025-09-15 06:54:44,212 [INFO] Sync complete.
+2025-09-15 06:58:03,733 [WARNING] Failed SQL connection to LOHITH\\SQLEXPRESS: ('08001', '[08001] [Microsoft][ODBC Driver 17 for SQL Server]SQL Server Network Interfaces: Error Locating Server/Instance Specified [xFFFFFFFF].  (-1) (SQLDriverConnect); [08001] [Microsoft][ODBC Driver 17 for SQL Server]Login timeout expired (0); [08001] [Microsoft][ODBC Driver 17 for SQL Server]A network-related or instance-specific error has occurred while establishing a connection to SQL Server. Server is not found or not accessible. Check if instance name is correct and if SQL Server is configured to allow remote connections. For more information see SQL Server Books Online. (-1)')
+2025-09-15 06:58:03,806 [INFO] Connected to default DB lohit on server 127.0.0.1,1433
+2025-09-15 06:58:03,806 [INFO] Fetching Ledger...
+2025-09-15 06:58:03,892 [INFO] Ledger: Licensed mode (full fields)
+2025-09-15 06:58:03,892 [INFO] Ledger: Parsed 11 rows
+2025-09-15 06:58:03,939 [INFO] Upserted 11 rows into Ledger
+2025-09-15 06:58:03,940 [INFO] Fetching Group...
+2025-09-15 06:58:03,957 [INFO] Group: Licensed mode (full fields)
+2025-09-15 06:58:03,958 [INFO] Group: Parsed 29 rows
+2025-09-15 06:58:04,025 [INFO] Upserted 29 rows into Group
+2025-09-15 06:58:04,025 [INFO] Fetching VoucherType...
+2025-09-15 06:58:04,030 [INFO] VoucherType: Licensed mode (full fields)
+2025-09-15 06:58:04,030 [INFO] VoucherType: Parsed 25 rows
+2025-09-15 07:14:46,625 [WARNING] Failed SQL connection to LOHITH\\SQLEXPRESS: ('08001', '[08001] [Microsoft][ODBC Driver 17 for SQL Server]SQL Server Network Interfaces: Error Locating Server/Instance Specified [xFFFFFFFF].  (-1) (SQLDriverConnect); [08001] [Microsoft][ODBC Driver 17 for SQL Server]Login timeout expired (0); [08001] [Microsoft][ODBC Driver 17 for SQL Server]A network-related or instance-specific error has occurred while establishing a connection to SQL Server. Server is not found or not accessible. Check if instance name is correct and if SQL Server is configured to allow remote connections. For more information see SQL Server Books Online. (-1)')
+2025-09-15 07:14:46,692 [INFO] Connected to default DB lohit on server 127.0.0.1,1433
+2025-09-15 07:14:46,692 [INFO] Fetching Ledger...
+2025-09-15 07:14:46,715 [INFO] Ledger: Licensed mode (full fields)
+2025-09-15 07:14:46,716 [INFO] Ledger: Parsed 11 rows
+2025-09-15 07:14:46,786 [INFO] Upserted 11 rows into Ledger
+2025-09-15 07:14:46,786 [INFO] Fetching Group...
+2025-09-15 07:14:46,793 [INFO] Group: Licensed mode (full fields)
+2025-09-15 07:14:46,793 [INFO] Group: Parsed 29 rows
+2025-09-15 07:14:46,852 [INFO] Upserted 29 rows into Group
+2025-09-15 07:14:46,853 [INFO] Fetching VoucherType...
+2025-09-15 07:14:46,858 [INFO] VoucherType: Licensed mode (full fields)
+2025-09-15 07:14:46,858 [INFO] VoucherType: Parsed 25 rows
+2025-09-15 07:14:46,893 [INFO] Altering VoucherType: added new column [NUMBERINGMETHOD]
+2025-09-15 07:14:46,922 [INFO] Upserted 25 rows into VoucherType
+2025-09-15 07:14:46,922 [INFO] Fetching Currency...
+2025-09-15 07:15:01,995 [ERROR] Tally request failed: ('Connection aborted.', ConnectionResetError(10054, 'An existing connection was forcibly closed by the remote host', None, 10054, None))
+2025-09-15 07:15:01,996 [ERROR] Parse error: no element found: line 1, column 0
+2025-09-15 07:15:06,050 [ERROR] Tally request failed: HTTPConnectionPool(host='localhost', port=9000): Max retries exceeded with url: / (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x000001B9F9EE2780>: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it'))
+2025-09-15 07:15:06,050 [ERROR] Parse error: no element found: line 1, column 0
+2025-09-15 07:15:06,051 [INFO] Currency: Edu mode (NAME only)
+2025-09-15 07:15:06,051 [INFO] Currency: Parsed 0 rows
+2025-09-15 07:15:06,051 [WARNING] Empty DataFrame for Currency, skipping.
+2025-09-15 07:15:06,051 [INFO] Fetching Budget...
+2025-09-15 07:15:10,101 [ERROR] Tally request failed: HTTPConnectionPool(host='localhost', port=9000): Max retries exceeded with url: / (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x000001B9F9E8B0B0>: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it'))
+2025-09-15 07:15:10,101 [ERROR] Parse error: no element found: line 1, column 0
+2025-09-15 07:15:14,143 [ERROR] Tally request failed: HTTPConnectionPool(host='localhost', port=9000): Max retries exceeded with url: / (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x000001B9F9F68AF0>: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it'))
+2025-09-15 07:15:14,143 [ERROR] Parse error: no element found: line 1, column 0
+2025-09-15 07:15:14,144 [INFO] Budget: Edu mode (NAME only)
+2025-09-15 07:15:14,144 [INFO] Budget: Parsed 0 rows
+2025-09-15 07:15:14,144 [WARNING] Empty DataFrame for Budget, skipping.
+2025-09-15 07:15:14,144 [INFO] Fetching Scenario...
+2025-09-15 07:15:18,200 [ERROR] Tally request failed: HTTPConnectionPool(host='localhost', port=9000): Max retries exceeded with url: / (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x000001B9F9F69480>: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it'))
+2025-09-15 07:15:18,201 [ERROR] Parse error: no element found: line 1, column 0
+2025-09-15 07:15:22,262 [ERROR] Tally request failed: HTTPConnectionPool(host='localhost', port=9000): Max retries exceeded with url: / (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x000001B9F9F698C0>: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it'))
+2025-09-15 07:15:22,262 [ERROR] Parse error: no element found: line 1, column 0
+2025-09-15 07:15:22,263 [INFO] Scenario: Edu mode (NAME only)
+2025-09-15 07:15:22,264 [INFO] Scenario: Parsed 0 rows
+2025-09-15 07:15:22,264 [WARNING] Empty DataFrame for Scenario, skipping.
+2025-09-15 07:15:22,264 [INFO] Fetching CostCentre...
+2025-09-15 07:15:26,318 [ERROR] Tally request failed: HTTPConnectionPool(host='localhost', port=9000): Max retries exceeded with url: / (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x000001B9F9F696A0>: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it'))
+2025-09-15 07:15:26,318 [ERROR] Parse error: no element found: line 1, column 0
+2025-09-15 07:15:30,380 [ERROR] Tally request failed: HTTPConnectionPool(host='localhost', port=9000): Max retries exceeded with url: / (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x000001B9F9F69AE0>: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it'))
+2025-09-15 07:15:30,380 [ERROR] Parse error: no element found: line 1, column 0
+2025-09-15 07:15:30,381 [INFO] CostCentre: Edu mode (NAME only)
+2025-09-15 07:15:30,381 [INFO] CostCentre: Parsed 0 rows
+2025-09-15 07:15:30,381 [WARNING] Empty DataFrame for CostCentre, skipping.
+2025-09-15 07:15:30,381 [INFO] Fetching CostCategory...
+2025-09-15 07:15:34,427 [ERROR] Tally request failed: HTTPConnectionPool(host='localhost', port=9000): Max retries exceeded with url: / (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x000001B9F9F69D00>: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it'))
+2025-09-15 07:15:34,428 [ERROR] Parse error: no element found: line 1, column 0
+2025-09-15 07:15:38,471 [ERROR] Tally request failed: HTTPConnectionPool(host='localhost', port=9000): Max retries exceeded with url: / (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x000001B9F9F69F20>: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it'))
+2025-09-15 07:15:38,472 [ERROR] Parse error: no element found: line 1, column 0
+2025-09-15 07:15:38,472 [INFO] CostCategory: Edu mode (NAME only)
+2025-09-15 07:15:38,472 [INFO] CostCategory: Parsed 0 rows
+2025-09-15 07:15:38,472 [WARNING] Empty DataFrame for CostCategory, skipping.
+2025-09-15 07:15:38,473 [INFO] Fetching InterestCollection...
+2025-09-15 07:15:42,528 [ERROR] Tally request failed: HTTPConnectionPool(host='localhost', port=9000): Max retries exceeded with url: / (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x000001B9F9F6A140>: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it'))
+2025-09-15 07:15:42,529 [ERROR] Parse error: no element found: line 1, column 0
+2025-09-15 07:15:46,587 [ERROR] Tally request failed: HTTPConnectionPool(host='localhost', port=9000): Max retries exceeded with url: / (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x000001B9F9F6A360>: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it'))
+2025-09-15 07:15:46,587 [ERROR] Parse error: no element found: line 1, column 0
+2025-09-15 07:15:46,588 [INFO] InterestCollection: Edu mode (NAME only)
+2025-09-15 07:15:46,588 [INFO] InterestCollection: Parsed 0 rows
+2025-09-15 07:15:46,588 [WARNING] Empty DataFrame for InterestCollection, skipping.
+2025-09-15 07:15:46,588 [INFO] Fetching StockGroup...
+2025-09-15 07:15:50,641 [ERROR] Tally request failed: HTTPConnectionPool(host='localhost', port=9000): Max retries exceeded with url: / (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x000001B9F9F6A580>: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it'))
+2025-09-15 07:15:50,641 [ERROR] Parse error: no element found: line 1, column 0
+2025-09-15 07:15:54,702 [ERROR] Tally request failed: HTTPConnectionPool(host='localhost', port=9000): Max retries exceeded with url: / (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x000001B9F9F6A7A0>: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it'))
+2025-09-15 07:15:54,702 [ERROR] Parse error: no element found: line 1, column 0
+2025-09-15 07:15:54,703 [INFO] StockGroup: Edu mode (NAME only)
+2025-09-15 07:15:54,703 [INFO] StockGroup: Parsed 0 rows
+2025-09-15 07:15:54,703 [WARNING] Empty DataFrame for StockGroup, skipping.
+2025-09-15 07:15:54,703 [INFO] Fetching StockCategory...
+2025-09-15 07:15:58,760 [ERROR] Tally request failed: HTTPConnectionPool(host='localhost', port=9000): Max retries exceeded with url: / (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x000001B9F9E6B8A0>: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it'))
+2025-09-15 07:15:58,760 [ERROR] Parse error: no element found: line 1, column 0
+2025-09-15 07:16:02,821 [ERROR] Tally request failed: HTTPConnectionPool(host='localhost', port=9000): Max retries exceeded with url: / (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x000001B9F9E6BF00>: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it'))
+2025-09-15 07:16:02,822 [ERROR] Parse error: no element found: line 1, column 0
+2025-09-15 07:16:02,823 [INFO] StockCategory: Edu mode (NAME only)
+2025-09-15 07:16:02,823 [INFO] StockCategory: Parsed 0 rows
+2025-09-15 07:16:02,823 [WARNING] Empty DataFrame for StockCategory, skipping.
+2025-09-15 07:16:02,823 [INFO] Fetching StockItem...
+2025-09-15 07:16:06,880 [ERROR] Tally request failed: HTTPConnectionPool(host='localhost', port=9000): Max retries exceeded with url: / (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x000001B9F9F6A690>: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it'))
+2025-09-15 07:16:06,880 [ERROR] Parse error: no element found: line 1, column 0
+2025-09-15 07:16:10,946 [ERROR] Tally request failed: HTTPConnectionPool(host='localhost', port=9000): Max retries exceeded with url: / (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x000001B9F9F6A470>: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it'))
+2025-09-15 07:16:10,947 [ERROR] Parse error: no element found: line 1, column 0
+2025-09-15 07:16:10,947 [INFO] StockItem: Edu mode (NAME only)
+2025-09-15 07:16:10,947 [INFO] StockItem: Parsed 0 rows
+2025-09-15 07:16:10,948 [WARNING] Empty DataFrame for StockItem, skipping.
+2025-09-15 07:16:10,948 [INFO] Fetching Unit...
+2025-09-15 07:16:15,024 [ERROR] Tally request failed: HTTPConnectionPool(host='localhost', port=9000): Max retries exceeded with url: / (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x000001B9F9F6A250>: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it'))
+2025-09-15 07:16:15,024 [ERROR] Parse error: no element found: line 1, column 0
+2025-09-15 07:16:19,079 [ERROR] Tally request failed: HTTPConnectionPool(host='localhost', port=9000): Max retries exceeded with url: / (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x000001B9F9F6A030>: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it'))
+2025-09-15 07:16:19,079 [ERROR] Parse error: no element found: line 1, column 0
+2025-09-15 07:16:19,080 [INFO] Unit: Edu mode (NAME only)
+2025-09-15 07:16:19,080 [INFO] Unit: Parsed 0 rows
+2025-09-15 07:16:19,080 [WARNING] Empty DataFrame for Unit, skipping.
+2025-09-15 07:16:19,081 [INFO] Fetching Godown...
+2025-09-15 07:16:23,132 [ERROR] Tally request failed: HTTPConnectionPool(host='localhost', port=9000): Max retries exceeded with url: / (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x000001B9F9F69E10>: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it'))
+2025-09-15 07:16:23,132 [ERROR] Parse error: no element found: line 1, column 0
+2025-09-15 07:16:27,201 [ERROR] Tally request failed: HTTPConnectionPool(host='localhost', port=9000): Max retries exceeded with url: / (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x000001B9F9F69BF0>: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it'))
+2025-09-15 07:16:27,201 [ERROR] Parse error: no element found: line 1, column 0
+2025-09-15 07:16:27,202 [INFO] Godown: Edu mode (NAME only)
+2025-09-15 07:16:27,202 [INFO] Godown: Parsed 0 rows
+2025-09-15 07:16:27,202 [WARNING] Empty DataFrame for Godown, skipping.
+2025-09-15 07:16:27,203 [INFO] Fetching Batch...
+2025-09-15 07:16:31,266 [ERROR] Tally request failed: HTTPConnectionPool(host='localhost', port=9000): Max retries exceeded with url: / (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x000001B9F9F697B0>: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it'))
+2025-09-15 07:16:31,267 [ERROR] Parse error: no element found: line 1, column 0
+2025-09-15 07:16:35,309 [ERROR] Tally request failed: HTTPConnectionPool(host='localhost', port=9000): Max retries exceeded with url: / (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x000001B9F9F699D0>: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it'))
+2025-09-15 07:16:35,310 [ERROR] Parse error: no element found: line 1, column 0
+2025-09-15 07:16:35,310 [INFO] Batch: Edu mode (NAME only)
+2025-09-15 07:16:35,311 [INFO] Batch: Parsed 0 rows
+2025-09-15 07:16:35,311 [WARNING] Empty DataFrame for Batch, skipping.
+2025-09-15 07:16:35,311 [INFO] Fetching VoucherClass...
+2025-09-15 07:16:39,361 [ERROR] Tally request failed: HTTPConnectionPool(host='localhost', port=9000): Max retries exceeded with url: / (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x000001B9F9F69150>: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it'))
+2025-09-15 07:16:39,362 [ERROR] Parse error: no element found: line 1, column 0
+2025-09-15 07:16:43,411 [ERROR] Tally request failed: HTTPConnectionPool(host='localhost', port=9000): Max retries exceeded with url: / (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x000001B9F9F69260>: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it'))
+2025-09-15 07:16:43,411 [ERROR] Parse error: no element found: line 1, column 0
+2025-09-15 07:16:43,412 [INFO] VoucherClass: Edu mode (NAME only)
+2025-09-15 07:16:43,413 [INFO] VoucherClass: Parsed 0 rows
+2025-09-15 07:16:43,413 [WARNING] Empty DataFrame for VoucherClass, skipping.
+2025-09-15 07:16:43,413 [INFO] Fetching EmployeeGroup...
+2025-09-15 07:16:47,455 [ERROR] Tally request failed: HTTPConnectionPool(host='localhost', port=9000): Max retries exceeded with url: / (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x000001B9F9F69590>: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it'))
+2025-09-15 07:16:47,456 [ERROR] Parse error: no element found: line 1, column 0
+2025-09-15 07:16:51,513 [ERROR] Tally request failed: HTTPConnectionPool(host='localhost', port=9000): Max retries exceeded with url: / (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x000001B9F9F68D10>: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it'))
+2025-09-15 07:16:51,513 [ERROR] Parse error: no element found: line 1, column 0
+2025-09-15 07:16:51,514 [INFO] EmployeeGroup: Edu mode (NAME only)
+2025-09-15 07:16:51,514 [INFO] EmployeeGroup: Parsed 0 rows
+2025-09-15 07:16:51,514 [WARNING] Empty DataFrame for EmployeeGroup, skipping.
+2025-09-15 07:16:51,515 [INFO] Fetching Employee...
+2025-09-15 07:16:55,570 [ERROR] Tally request failed: HTTPConnectionPool(host='localhost', port=9000): Max retries exceeded with url: / (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x000001B9F9F685A0>: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it'))
+2025-09-15 07:16:55,572 [ERROR] Parse error: no element found: line 1, column 0
+2025-09-15 07:16:59,619 [ERROR] Tally request failed: HTTPConnectionPool(host='localhost', port=9000): Max retries exceeded with url: / (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x000001B9F9E6BF00>: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it'))
+2025-09-15 07:16:59,619 [ERROR] Parse error: no element found: line 1, column 0
+2025-09-15 07:16:59,620 [INFO] Employee: Edu mode (NAME only)
+2025-09-15 07:16:59,620 [INFO] Employee: Parsed 0 rows
+2025-09-15 07:16:59,620 [WARNING] Empty DataFrame for Employee, skipping.
+2025-09-15 07:16:59,621 [INFO] Fetching AttendanceType...
+2025-09-15 07:17:03,661 [ERROR] Tally request failed: HTTPConnectionPool(host='localhost', port=9000): Max retries exceeded with url: / (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x000001B9F9E6BAC0>: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it'))
+2025-09-15 07:17:03,661 [ERROR] Parse error: no element found: line 1, column 0
+2025-09-15 07:17:07,712 [ERROR] Tally request failed: HTTPConnectionPool(host='localhost', port=9000): Max retries exceeded with url: / (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x000001B9F9F68D10>: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it'))
+2025-09-15 07:17:07,712 [ERROR] Parse error: no element found: line 1, column 0
+2025-09-15 07:17:07,713 [INFO] AttendanceType: Edu mode (NAME only)
+2025-09-15 07:17:07,713 [INFO] AttendanceType: Parsed 0 rows
+2025-09-15 07:17:07,713 [WARNING] Empty DataFrame for AttendanceType, skipping.
+2025-09-15 07:17:07,713 [INFO] Fetching PayHead...
+2025-09-15 07:17:11,769 [ERROR] Tally request failed: HTTPConnectionPool(host='localhost', port=9000): Max retries exceeded with url: / (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x000001B9F9F69590>: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it'))
+2025-09-15 07:17:11,769 [ERROR] Parse error: no element found: line 1, column 0
+2025-09-15 07:17:15,817 [ERROR] Tally request failed: HTTPConnectionPool(host='localhost', port=9000): Max retries exceeded with url: / (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x000001B9F9F69260>: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it'))
+2025-09-15 07:17:15,817 [ERROR] Parse error: no element found: line 1, column 0
+2025-09-15 07:17:15,818 [INFO] PayHead: Edu mode (NAME only)
+2025-09-15 07:17:15,818 [INFO] PayHead: Parsed 0 rows
+2025-09-15 07:17:15,819 [WARNING] Empty DataFrame for PayHead, skipping.
+2025-09-15 07:17:15,819 [INFO] Fetching SalaryDetails...
+2025-09-15 07:17:19,865 [ERROR] Tally request failed: HTTPConnectionPool(host='localhost', port=9000): Max retries exceeded with url: / (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x000001B9F9F69150>: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it'))
+2025-09-15 07:17:19,868 [ERROR] Parse error: no element found: line 1, column 0
+2025-09-15 07:17:23,916 [ERROR] Tally request failed: HTTPConnectionPool(host='localhost', port=9000): Max retries exceeded with url: / (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x000001B9F9F699D0>: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it'))
+2025-09-15 07:17:23,916 [ERROR] Parse error: no element found: line 1, column 0
+2025-09-15 07:17:23,917 [INFO] SalaryDetails: Edu mode (NAME only)
+2025-09-15 07:17:23,917 [INFO] SalaryDetails: Parsed 0 rows
+2025-09-15 07:17:23,917 [WARNING] Empty DataFrame for SalaryDetails, skipping.
+2025-09-15 07:17:23,918 [INFO] Fetching Company...
+2025-09-15 07:17:27,966 [ERROR] Tally request failed: HTTPConnectionPool(host='localhost', port=9000): Max retries exceeded with url: / (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x000001B9F9F697B0>: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it'))
+2025-09-15 07:17:27,966 [ERROR] Parse error: no element found: line 1, column 0
+2025-09-15 07:17:32,020 [ERROR] Tally request failed: HTTPConnectionPool(host='localhost', port=9000): Max retries exceeded with url: / (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x000001B9F9F69BF0>: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it'))
+2025-09-15 07:17:32,020 [ERROR] Parse error: no element found: line 1, column 0
+2025-09-15 07:17:32,021 [INFO] Company: Edu mode (NAME only)
+2025-09-15 07:17:32,021 [INFO] Company: Parsed 0 rows
+2025-09-15 07:17:32,021 [WARNING] Empty DataFrame for Company, skipping.
+2025-09-15 07:17:32,022 [INFO] Fetching SecurityControl...
+2025-09-15 07:17:36,060 [ERROR] Tally request failed: HTTPConnectionPool(host='localhost', port=9000): Max retries exceeded with url: / (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x000001B9F9F69E10>: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it'))
+2025-09-15 07:17:36,061 [ERROR] Parse error: no element found: line 1, column 0
+2025-09-15 07:17:40,109 [ERROR] Tally request failed: HTTPConnectionPool(host='localhost', port=9000): Max retries exceeded with url: / (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x000001B9F9F6A030>: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it'))
+2025-09-15 07:17:40,109 [ERROR] Parse error: no element found: line 1, column 0
+2025-09-15 07:17:40,110 [INFO] SecurityControl: Edu mode (NAME only)
+2025-09-15 07:17:40,110 [INFO] SecurityControl: Parsed 0 rows
+2025-09-15 07:17:40,110 [WARNING] Empty DataFrame for SecurityControl, skipping.
+2025-09-15 07:17:40,110 [INFO] Fetching StatutoryFeature...
+2025-09-15 07:17:44,168 [ERROR] Tally request failed: HTTPConnectionPool(host='localhost', port=9000): Max retries exceeded with url: / (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x000001B9F9F6A250>: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it'))
+2025-09-15 07:17:44,168 [ERROR] Parse error: no element found: line 1, column 0
+2025-09-15 07:17:48,208 [ERROR] Tally request failed: HTTPConnectionPool(host='localhost', port=9000): Max retries exceeded with url: / (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x000001B9F9F6A470>: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it'))
+2025-09-15 07:17:48,208 [ERROR] Parse error: no element found: line 1, column 0
+2025-09-15 07:17:48,209 [INFO] StatutoryFeature: Edu mode (NAME only)
+2025-09-15 07:17:48,209 [INFO] StatutoryFeature: Parsed 0 rows
+2025-09-15 07:17:48,209 [WARNING] Empty DataFrame for StatutoryFeature, skipping.
+2025-09-15 07:17:48,210 [INFO] One-time sync (all masters) complete.
+2025-09-15 07:35:30,615 [WARNING] Failed SQL connection to LOHITH\\SQLEXPRESS: ('08001', '[08001] [Microsoft][ODBC Driver 17 for SQL Server]SQL Server Network Interfaces: Error Locating Server/Instance Specified [xFFFFFFFF].  (-1) (SQLDriverConnect); [08001] [Microsoft][ODBC Driver 17 for SQL Server]Login timeout expired (0); [08001] [Microsoft][ODBC Driver 17 for SQL Server]A network-related or instance-specific error has occurred while establishing a connection to SQL Server. Server is not found or not accessible. Check if instance name is correct and if SQL Server is configured to allow remote connections. For more information see SQL Server Books Online. (-1)')
+2025-09-15 07:35:30,739 [INFO] Connected to SQL Server: 127.0.0.1,1433
+2025-09-15 07:35:36,781 [INFO] Connected to database tempdb on server 127.0.0.1,1433
+2025-09-15 07:35:39,027 [INFO] Fetching Ledger...
+2025-09-15 07:35:39,083 [INFO] Ledger: Licensed mode (full fields)
+2025-09-15 07:35:39,084 [INFO] Ledger: Parsed 11 rows
+2025-09-15 07:35:39,204 [INFO] Upserted 11 rows into Ledger
+2025-09-15 07:35:39,204 [INFO] Interactive sync complete.
+2025-09-15 07:37:58,644 [WARNING] Failed SQL connection to LOHITH\\SQLEXPRESS: ('08001', '[08001] [Microsoft][ODBC Driver 17 for SQL Server]SQL Server Network Interfaces: Error Locating Server/Instance Specified [xFFFFFFFF].  (-1) (SQLDriverConnect); [08001] [Microsoft][ODBC Driver 17 for SQL Server]Login timeout expired (0); [08001] [Microsoft][ODBC Driver 17 for SQL Server]A network-related or instance-specific error has occurred while establishing a connection to SQL Server. Server is not found or not accessible. Check if instance name is correct and if SQL Server is configured to allow remote connections. For more information see SQL Server Books Online. (-1)')
+2025-09-15 07:37:58,684 [INFO] Connected to SQL Server: 127.0.0.1,1433
+2025-09-15 07:41:41,483 [WARNING] Failed SQL connection to 127.0.0.1,1433: ('42000', '[42000] [Microsoft][ODBC Driver 17 for SQL Server][SQL Server]CREATE DATABASE statement not allowed within multi-statement transaction. (226) (SQLExecDirectW)')
+2025-09-15 07:42:07,273 [WARNING] Failed SQL connection to LOHITH\\SQLEXPRESS: ('08001', '[08001] [Microsoft][ODBC Driver 17 for SQL Server]SQL Server Network Interfaces: Error Locating Server/Instance Specified [xFFFFFFFF].  (-1) (SQLDriverConnect); [08001] [Microsoft][ODBC Driver 17 for SQL Server]Login timeout expired (0); [08001] [Microsoft][ODBC Driver 17 for SQL Server]A network-related or instance-specific error has occurred while establishing a connection to SQL Server. Server is not found or not accessible. Check if instance name is correct and if SQL Server is configured to allow remote connections. For more information see SQL Server Books Online. (-1)')
+2025-09-15 07:42:07,327 [INFO] Connected to default DB lohit on server 127.0.0.1,1433
+2025-09-15 07:42:07,328 [INFO] Fetching Ledger...
+2025-09-15 07:42:07,335 [INFO] Ledger: Licensed mode (full fields)
+2025-09-15 07:42:07,335 [INFO] Ledger: Parsed 11 rows
+2025-09-15 07:42:07,404 [INFO] Upserted 11 rows into Ledger
+2025-09-15 07:42:07,405 [INFO] Fetching Group...
+2025-09-15 07:42:07,416 [INFO] Group: Licensed mode (full fields)
+2025-09-15 07:42:07,417 [INFO] Group: Parsed 29 rows
+2025-09-15 07:42:07,479 [INFO] Upserted 29 rows into Group
+2025-09-15 07:42:07,480 [INFO] Fetching VoucherType...
+2025-09-15 07:42:07,487 [INFO] VoucherType: Licensed mode (full fields)
+2025-09-15 07:42:07,488 [INFO] VoucherType: Parsed 25 rows
+2025-09-15 07:42:07,540 [INFO] Upserted 25 rows into VoucherType
+2025-09-15 07:42:07,540 [INFO] Fetching Currency...
+2025-09-15 07:49:17,287 [WARNING] Failed SQL connection to LOHITH\\SQLEXPRESS: ('08001', '[08001] [Microsoft][ODBC Driver 17 for SQL Server]SQL Server Network Interfaces: Error Locating Server/Instance Specified [xFFFFFFFF].  (-1) (SQLDriverConnect); [08001] [Microsoft][ODBC Driver 17 for SQL Server]Login timeout expired (0); [08001] [Microsoft][ODBC Driver 17 for SQL Server]A network-related or instance-specific error has occurred while establishing a connection to SQL Server. Server is not found or not accessible. Check if instance name is correct and if SQL Server is configured to allow remote connections. For more information see SQL Server Books Online. (-1)')
+2025-09-15 07:49:17,342 [INFO] Connected to SQL Server: 127.0.0.1,1433
+2025-09-15 07:49:22,834 [INFO] Connected to database master on server 127.0.0.1,1433
+2025-09-15 07:49:33,738 [INFO] Fetching Godown...
+2025-09-15 07:49:49,818 [ERROR] Tally request failed: ('Connection aborted.', ConnectionResetError(10054, 'An existing connection was forcibly closed by the remote host', None, 10054, None))
+2025-09-15 07:49:49,819 [INFO] Saved raw response for Godown -> tally_raw_Godown_20250915_074949.xml
+2025-09-15 07:49:49,821 [ERROR] Parse error: no element found: line 1, column 0
+2025-09-15 07:49:53,888 [ERROR] Tally request failed: HTTPConnectionPool(host='localhost', port=9000): Max retries exceeded with url: / (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x000001EFB1AD96D0>: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it'))
+2025-09-15 07:49:53,889 [INFO] Saved raw response for Godown -> tally_raw_Godown_20250915_074953.xml
+2025-09-15 07:49:53,890 [ERROR] Parse error: no element found: line 1, column 0
+2025-09-15 07:49:53,890 [INFO] Godown: Edu mode (NAME only)
+2025-09-15 07:49:53,890 [INFO] Godown: Parsed 0 rows
+2025-09-15 07:49:53,891 [WARNING] Empty DataFrame for Godown, skipping.
+2025-09-15 07:49:53,891 [INFO] Interactive sync complete.
+2025-09-15 07:50:46,225 [WARNING] Failed SQL connection to LOHITH\\SQLEXPRESS: ('08001', '[08001] [Microsoft][ODBC Driver 17 for SQL Server]SQL Server Network Interfaces: Error Locating Server/Instance Specified [xFFFFFFFF].  (-1) (SQLDriverConnect); [08001] [Microsoft][ODBC Driver 17 for SQL Server]Login timeout expired (0); [08001] [Microsoft][ODBC Driver 17 for SQL Server]A network-related or instance-specific error has occurred while establishing a connection to SQL Server. Server is not found or not accessible. Check if instance name is correct and if SQL Server is configured to allow remote connections. For more information see SQL Server Books Online. (-1)')
+2025-09-15 07:50:46,279 [INFO] Connected to SQL Server: 127.0.0.1,1433
+2025-09-15 07:50:49,350 [INFO] Connected to database master on server 127.0.0.1,1433
+2025-09-15 07:50:59,471 [INFO] Fetching Unit...
+2025-09-15 07:51:05,357 [ERROR] Tally request failed: ('Connection aborted.', ConnectionResetError(10054, 'An existing connection was forcibly closed by the remote host', None, 10054, None))
+2025-09-15 07:51:05,358 [INFO] Saved raw response for Unit -> tally_raw_Unit_20250915_075105.xml
+2025-09-15 07:51:05,359 [ERROR] Parse error: no element found: line 1, column 0
+2025-09-15 07:51:09,404 [ERROR] Tally request failed: HTTPConnectionPool(host='localhost', port=9000): Max retries exceeded with url: / (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x000002628BF496D0>: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it'))
+2025-09-15 07:51:09,405 [INFO] Saved raw response for Unit -> tally_raw_Unit_20250915_075109.xml
+2025-09-15 07:51:09,405 [ERROR] Parse error: no element found: line 1, column 0
+2025-09-15 07:51:09,406 [INFO] Unit: Edu mode (NAME only)
+2025-09-15 07:51:09,406 [INFO] Unit: Parsed 0 rows
+2025-09-15 07:51:09,406 [WARNING] Empty DataFrame for Unit, skipping.
+2025-09-15 07:51:09,407 [INFO] Interactive sync complete.
+2025-09-15 07:52:26,672 [WARNING] Failed SQL connection to LOHITH\\SQLEXPRESS: ('08001', '[08001] [Microsoft][ODBC Driver 17 for SQL Server]SQL Server Network Interfaces: Error Locating Server/Instance Specified [xFFFFFFFF].  (-1) (SQLDriverConnect); [08001] [Microsoft][ODBC Driver 17 for SQL Server]Login timeout expired (0); [08001] [Microsoft][ODBC Driver 17 for SQL Server]A network-related or instance-specific error has occurred while establishing a connection to SQL Server. Server is not found or not accessible. Check if instance name is correct and if SQL Server is configured to allow remote connections. For more information see SQL Server Books Online. (-1)')
+2025-09-15 07:52:26,724 [INFO] Connected to SQL Server: 127.0.0.1,1433
+2025-09-15 07:52:30,301 [INFO] Connected to database tempdb on server 127.0.0.1,1433
+2025-09-15 07:52:43,637 [INFO] Fetching VoucherType...
+2025-09-15 07:52:43,646 [INFO] Saved raw response for VoucherType -> tally_raw_VoucherType_20250915_075243.xml
+2025-09-15 07:52:43,649 [INFO] VoucherType: Licensed mode (full fields)
+2025-09-15 07:52:43,649 [INFO] VoucherType: Parsed 25 rows
+2025-09-15 07:52:43,716 [INFO] Upserted 25 rows into VoucherType
+2025-09-15 07:52:43,716 [INFO] Interactive sync complete.
+2025-09-15 08:19:16,427 [WARNING] Failed SQL connection to LOHITH\\SQLEXPRESS: ('08001', '[08001] [Microsoft][ODBC Driver 17 for SQL Server]SQL Server Network Interfaces: Error Locating Server/Instance Specified [xFFFFFFFF].  (-1) (SQLDriverConnect); [08001] [Microsoft][ODBC Driver 17 for SQL Server]Login timeout expired (0); [08001] [Microsoft][ODBC Driver 17 for SQL Server]A network-related or instance-specific error has occurred while establishing a connection to SQL Server. Server is not found or not accessible. Check if instance name is correct and if SQL Server is configured to allow remote connections. For more information see SQL Server Books Online. (-1)')
+2025-09-15 08:19:16,475 [INFO] Connected to SQL Server: 127.0.0.1,1433
+2025-09-15 08:19:32,002 [INFO] Connected to database model on server 127.0.0.1,1433
+2025-09-15 08:19:36,053 [INFO] Fetching VoucherType...
+2025-09-15 08:19:36,077 [INFO] VoucherType: Licensed mode (full fields)
+2025-09-15 08:19:36,077 [INFO] VoucherType: Parsed 25 rows
+2025-09-15 08:19:36,151 [WARNING] Could not create indexes on VoucherType: ('42000', "[42000] [Microsoft][ODBC Driver 17 for SQL Server][SQL Server]Column 'NAME' in table 'VoucherType' is of a type that is invalid for use as a key column in an index. (1919) (SQLExecDirectW)")
+2025-09-15 08:19:36,181 [INFO] Synced 25 rows into VoucherType
+2025-09-15 08:19:36,182 [INFO] Interactive sync complete.
+2025-09-15 08:30:20,989 [WARNING] Failed SQL connection to LOHITH\\SQLEXPRESS: ('08001', '[08001] [Microsoft][ODBC Driver 17 for SQL Server]SQL Server Network Interfaces: Error Locating Server/Instance Specified [xFFFFFFFF].  (-1) (SQLDriverConnect); [08001] [Microsoft][ODBC Driver 17 for SQL Server]Login timeout expired (0); [08001] [Microsoft][ODBC Driver 17 for SQL Server]A network-related or instance-specific error has occurred while establishing a connection to SQL Server. Server is not found or not accessible. Check if instance name is correct and if SQL Server is configured to allow remote connections. For more information see SQL Server Books Online. (-1)')
+2025-09-15 08:30:21,029 [INFO] Connected to default DB lohit on server 127.0.0.1,1433
+2025-09-15 08:30:21,029 [INFO] Fetching Ledger...
+2025-09-15 08:30:21,045 [INFO] Ledger: Edu mode (NAME + IDs)
+2025-09-15 08:30:21,045 [INFO] Ledger: Parsed 0 rows
+2025-09-15 08:30:21,046 [WARNING] Empty DataFrame for Ledger, skipping.
+2025-09-15 08:30:21,046 [INFO] Fetching Group...
+2025-09-15 08:30:21,055 [INFO] Group: Edu mode (NAME + IDs)
+2025-09-15 08:30:21,056 [INFO] Group: Parsed 0 rows
+2025-09-15 08:30:21,056 [WARNING] Empty DataFrame for Group, skipping.
+2025-09-15 08:30:21,056 [INFO] Fetching VoucherType...
+2025-09-15 08:30:21,064 [INFO] VoucherType: Licensed mode (full fields)
+2025-09-15 08:30:21,064 [INFO] VoucherType: Parsed 25 rows
+2025-09-15 08:30:21,112 [INFO] Altering VoucherType: added new column [_ALTERID]
+2025-09-15 08:30:21,114 [INFO] Altering VoucherType: added new column [_GUID]
+2025-09-15 08:30:21,115 [INFO] Altering VoucherType: added new column [_MASTERID]
+2025-09-15 08:30:21,116 [INFO] Altering VoucherType: added new column [_HASH]
+2025-09-15 08:30:21,116 [INFO] Altering VoucherType: added new column [_SYNCED_AT]
+2025-09-15 08:30:21,123 [WARNING] Could not create indexes on VoucherType: ('42000', "[42000] [Microsoft][ODBC Driver 17 for SQL Server][SQL Server]Column 'NAME' in table 'VoucherType' is of a type that is invalid for use as a key column in an index. (1919) (SQLExecDirectW)")
+2025-09-15 08:30:21,158 [INFO] Synced 25 rows into VoucherType
+2025-09-15 08:30:21,159 [INFO] Fetching Currency...
+2025-09-15 08:30:21,168 [INFO] Currency: Edu mode (NAME + IDs)
+2025-09-15 08:30:21,169 [INFO] Currency: Parsed 0 rows
+2025-09-15 08:30:21,169 [WARNING] Empty DataFrame for Currency, skipping.
+2025-09-15 08:30:21,169 [INFO] Fetching Budget...
+2025-09-15 08:30:21,176 [INFO] Budget: Edu mode (NAME + IDs)
+2025-09-15 08:30:21,177 [INFO] Budget: Parsed 0 rows
+2025-09-15 08:30:21,177 [WARNING] Empty DataFrame for Budget, skipping.
+2025-09-15 08:30:21,177 [INFO] Fetching Scenario...
+2025-09-15 08:30:21,185 [INFO] Scenario: Edu mode (NAME + IDs)
+2025-09-15 08:30:21,185 [INFO] Scenario: Parsed 0 rows
+2025-09-15 08:30:21,185 [WARNING] Empty DataFrame for Scenario, skipping.
+2025-09-15 08:30:21,185 [INFO] Fetching CostCentre...
+2025-09-15 08:30:21,192 [INFO] CostCentre: Edu mode (NAME + IDs)
+2025-09-15 08:30:21,192 [INFO] CostCentre: Parsed 0 rows
+2025-09-15 08:30:21,193 [WARNING] Empty DataFrame for CostCentre, skipping.
+2025-09-15 08:30:21,193 [INFO] Fetching CostCategory...
+2025-09-15 08:30:21,199 [INFO] CostCategory: Edu mode (NAME + IDs)
+2025-09-15 08:30:21,199 [INFO] CostCategory: Parsed 0 rows
+2025-09-15 08:30:21,199 [WARNING] Empty DataFrame for CostCategory, skipping.
+2025-09-15 08:30:21,199 [INFO] Fetching InterestCollection...
+2025-09-15 08:30:21,206 [INFO] InterestCollection: Edu mode (NAME + IDs)
+2025-09-15 08:30:21,206 [INFO] InterestCollection: Parsed 0 rows
+2025-09-15 08:30:21,207 [WARNING] Empty DataFrame for InterestCollection, skipping.
+2025-09-15 08:30:21,207 [INFO] Fetching StockGroup...
+2025-09-15 08:30:21,215 [INFO] StockGroup: Edu mode (NAME + IDs)
+2025-09-15 08:30:21,215 [INFO] StockGroup: Parsed 0 rows
+2025-09-15 08:30:21,215 [WARNING] Empty DataFrame for StockGroup, skipping.
+2025-09-15 08:30:21,215 [INFO] Fetching StockCategory...
+2025-09-15 08:30:21,224 [INFO] StockCategory: Edu mode (NAME + IDs)
+2025-09-15 08:30:21,225 [INFO] StockCategory: Parsed 0 rows
+2025-09-15 08:30:21,225 [WARNING] Empty DataFrame for StockCategory, skipping.
+2025-09-15 08:30:21,225 [INFO] Fetching StockItem...
+2025-09-15 08:30:21,234 [INFO] StockItem: Edu mode (NAME + IDs)
+2025-09-15 08:30:21,234 [INFO] StockItem: Parsed 0 rows
+2025-09-15 08:30:21,235 [WARNING] Empty DataFrame for StockItem, skipping.
+2025-09-15 08:30:21,235 [INFO] Fetching Unit...
+2025-09-15 08:30:21,244 [INFO] Unit: Edu mode (NAME + IDs)
+2025-09-15 08:30:21,244 [INFO] Unit: Parsed 0 rows
+2025-09-15 08:30:21,244 [WARNING] Empty DataFrame for Unit, skipping.
+2025-09-15 08:30:21,244 [INFO] Fetching Godown...
+2025-09-15 08:30:21,251 [INFO] Godown: Edu mode (NAME + IDs)
+2025-09-15 08:30:21,252 [INFO] Godown: Parsed 0 rows
+2025-09-15 08:30:21,252 [WARNING] Empty DataFrame for Godown, skipping.
+2025-09-15 08:30:21,252 [INFO] Fetching Batch...
+2025-09-15 08:30:21,260 [INFO] Batch: Edu mode (NAME + IDs)
+2025-09-15 08:30:21,261 [INFO] Batch: Parsed 0 rows
+2025-09-15 08:30:21,261 [WARNING] Empty DataFrame for Batch, skipping.
+2025-09-15 08:30:21,261 [INFO] Fetching VoucherClass...
+2025-09-15 08:30:21,271 [INFO] VoucherClass: Edu mode (NAME + IDs)
+2025-09-15 08:30:21,271 [INFO] VoucherClass: Parsed 0 rows
+2025-09-15 08:30:21,271 [WARNING] Empty DataFrame for VoucherClass, skipping.
+2025-09-15 08:30:21,272 [INFO] Fetching EmployeeGroup...
+2025-09-15 08:30:21,280 [INFO] EmployeeGroup: Edu mode (NAME + IDs)
+2025-09-15 08:30:21,280 [INFO] EmployeeGroup: Parsed 0 rows
+2025-09-15 08:30:21,280 [WARNING] Empty DataFrame for EmployeeGroup, skipping.
+2025-09-15 08:30:21,280 [INFO] Fetching Employee...
+2025-09-15 08:30:21,291 [INFO] Employee: Edu mode (NAME + IDs)
+2025-09-15 08:30:21,292 [INFO] Employee: Parsed 0 rows
+2025-09-15 08:30:21,292 [WARNING] Empty DataFrame for Employee, skipping.
+2025-09-15 08:30:21,292 [INFO] Fetching AttendanceType...
+2025-09-15 08:30:21,302 [INFO] AttendanceType: Edu mode (NAME + IDs)
+2025-09-15 08:30:21,302 [INFO] AttendanceType: Parsed 0 rows
+2025-09-15 08:30:21,302 [WARNING] Empty DataFrame for AttendanceType, skipping.
+2025-09-15 08:30:21,303 [INFO] Fetching PayHead...
+2025-09-15 08:30:21,312 [INFO] PayHead: Edu mode (NAME + IDs)
+2025-09-15 08:30:21,313 [INFO] PayHead: Parsed 0 rows
+2025-09-15 08:30:21,313 [WARNING] Empty DataFrame for PayHead, skipping.
+2025-09-15 08:30:21,313 [INFO] Fetching SalaryDetails...
+2025-09-15 08:30:21,321 [INFO] SalaryDetails: Edu mode (NAME + IDs)
+2025-09-15 08:30:21,322 [INFO] SalaryDetails: Parsed 0 rows
+2025-09-15 08:30:21,322 [WARNING] Empty DataFrame for SalaryDetails, skipping.
+2025-09-15 08:30:21,322 [INFO] Fetching Company...
+2025-09-15 08:30:21,329 [INFO] Company: Edu mode (NAME + IDs)
+2025-09-15 08:30:21,329 [INFO] Company: Parsed 0 rows
+2025-09-15 08:30:21,330 [WARNING] Empty DataFrame for Company, skipping.
+2025-09-15 08:30:21,330 [INFO] Fetching SecurityControl...
+2025-09-15 08:30:21,338 [INFO] SecurityControl: Edu mode (NAME + IDs)
+2025-09-15 08:30:21,339 [INFO] SecurityControl: Parsed 0 rows
+2025-09-15 08:30:21,339 [WARNING] Empty DataFrame for SecurityControl, skipping.
+2025-09-15 08:30:21,339 [INFO] Fetching StatutoryFeature...
+2025-09-15 08:30:21,347 [INFO] StatutoryFeature: Edu mode (NAME + IDs)
+2025-09-15 08:30:21,347 [INFO] StatutoryFeature: Parsed 0 rows
+2025-09-15 08:30:21,347 [WARNING] Empty DataFrame for StatutoryFeature, skipping.
+2025-09-15 08:30:21,348 [INFO] One-time sync (all masters) complete.
+2025-09-15 08:31:36,319 [WARNING] Failed SQL connection to LOHITH\\SQLEXPRESS: ('08001', '[08001] [Microsoft][ODBC Driver 17 for SQL Server]SQL Server Network Interfaces: Error Locating Server/Instance Specified [xFFFFFFFF].  (-1) (SQLDriverConnect); [08001] [Microsoft][ODBC Driver 17 for SQL Server]Login timeout expired (0); [08001] [Microsoft][ODBC Driver 17 for SQL Server]A network-related or instance-specific error has occurred while establishing a connection to SQL Server. Server is not found or not accessible. Check if instance name is correct and if SQL Server is configured to allow remote connections. For more information see SQL Server Books Online. (-1)')
+2025-09-15 08:31:36,353 [INFO] Connected to SQL Server: 127.0.0.1,1433
+2025-09-15 08:31:38,808 [INFO] Connected to database master on server 127.0.0.1,1433
+2025-09-15 08:31:41,268 [INFO] Fetching Ledger...
+2025-09-15 08:31:41,279 [INFO] Ledger: Edu mode (NAME + IDs)
+2025-09-15 08:31:41,280 [INFO] Ledger: Parsed 0 rows
+2025-09-15 08:31:41,280 [WARNING] Empty DataFrame for Ledger, skipping.
+2025-09-15 08:31:41,280 [INFO] Interactive sync complete.
+2025-09-15 08:32:12,495 [WARNING] Failed SQL connection to LOHITH\\SQLEXPRESS: ('08001', '[08001] [Microsoft][ODBC Driver 17 for SQL Server]SQL Server Network Interfaces: Error Locating Server/Instance Specified [xFFFFFFFF].  (-1) (SQLDriverConnect); [08001] [Microsoft][ODBC Driver 17 for SQL Server]Login timeout expired (0); [08001] [Microsoft][ODBC Driver 17 for SQL Server]A network-related or instance-specific error has occurred while establishing a connection to SQL Server. Server is not found or not accessible. Check if instance name is correct and if SQL Server is configured to allow remote connections. For more information see SQL Server Books Online. (-1)')
+2025-09-15 08:32:12,529 [INFO] Connected to SQL Server: 127.0.0.1,1433
+2025-09-15 08:32:14,032 [INFO] Connected to database master on server 127.0.0.1,1433
+2025-09-15 08:32:16,583 [INFO] Fetching Ledger...
+2025-09-15 08:32:16,616 [INFO] Saved raw response for Ledger -> tally_raw_Ledger_20250915_083216.xml
+2025-09-15 08:32:16,618 [INFO] Ledger: Licensed mode (full fields)
+2025-09-15 08:32:16,618 [INFO] Ledger: Parsed 11 rows
+2025-09-15 08:32:16,657 [INFO] Upserted 11 rows into Ledger
+2025-09-15 08:32:16,657 [INFO] Interactive sync complete.
+2025-09-16 10:04:14,200 [WARNING] Failed SQL connection to LOHITH\\SQLEXPRESS: ('08001', '[08001] [Microsoft][ODBC Driver 17 for SQL Server]SQL Server Network Interfaces: Error Locating Server/Instance Specified [xFFFFFFFF].  (-1) (SQLDriverConnect); [08001] [Microsoft][ODBC Driver 17 for SQL Server]Login timeout expired (0); [08001] [Microsoft][ODBC Driver 17 for SQL Server]A network-related or instance-specific error has occurred while establishing a connection to SQL Server. Server is not found or not accessible. Check if instance name is correct and if SQL Server is configured to allow remote connections. For more information see SQL Server Books Online. (-1)')
+2025-09-16 10:04:14,295 [INFO] Connected to SQL Server: 127.0.0.1,1433
+2025-09-16 10:04:18,981 [INFO] Connected to database msdb on server 127.0.0.1,1433
+2025-09-16 10:04:20,561 [INFO] Fetching Ledger...
+2025-09-16 10:04:20,787 [INFO] Ledger: Licensed mode (full fields)
+2025-09-16 10:04:20,787 [INFO] Ledger: Parsed 11 rows
+2025-09-16 10:04:20,937 [INFO] Upserted 11 rows into Ledger
+2025-09-16 10:04:20,938 [INFO] Interactive sync complete.
+2025-09-16 10:05:16,659 [WARNING] Failed SQL connection to LOHITH\\SQLEXPRESS: ('08001', '[08001] [Microsoft][ODBC Driver 17 for SQL Server]SQL Server Network Interfaces: Error Locating Server/Instance Specified [xFFFFFFFF].  (-1) (SQLDriverConnect); [08001] [Microsoft][ODBC Driver 17 for SQL Server]Login timeout expired (0); [08001] [Microsoft][ODBC Driver 17 for SQL Server]A network-related or instance-specific error has occurred while establishing a connection to SQL Server. Server is not found or not accessible. Check if instance name is correct and if SQL Server is configured to allow remote connections. For more information see SQL Server Books Online. (-1)')
+2025-09-16 10:05:16,716 [INFO] Connected to SQL Server: 127.0.0.1,1433
+2025-09-16 10:05:18,290 [INFO] Connected to database master on server 127.0.0.1,1433
+2025-09-16 10:05:20,958 [INFO] Fetching VoucherType...
+2025-09-16 10:05:20,992 [INFO] VoucherType: Licensed mode (full fields)
+2025-09-16 10:05:20,992 [INFO] VoucherType: Parsed 25 rows
+2025-09-16 10:05:21,060 [INFO] Upserted 25 rows into VoucherType
+2025-09-16 10:05:21,060 [INFO] Interactive sync complete.

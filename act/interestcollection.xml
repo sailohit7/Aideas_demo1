@@ -1,0 +1,13 @@
+<!-- InterestCollection -->
+<ENVELOPE>
+      <HEADER><VERSION>1</VERSION><TALLYREQUEST>Export</TALLYREQUEST>
+      <TYPE>Collection</TYPE><ID>Interest Collection</ID></HEADER>
+      <BODY><DESC>
+        <STATICVARIABLES><SVEXPORTFORMAT>$$SysName:XML</SVEXPORTFORMAT></STATICVARIABLES>
+        <TDL><TDLMESSAGE>
+          <COLLECTION NAME="Interest Collection" ISMODIFY="No" ISINITIALIZE="Yes">
+            <TYPE>InterestCollection</TYPE>
+            <FETCH>NAME,RATE,PERIODFROM</FETCH>
+          </COLLECTION>
+        </TDLMESSAGE></TDL>
+      </DESC></BODY></ENVELOPE>

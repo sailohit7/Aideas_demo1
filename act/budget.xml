@@ -1,0 +1,13 @@
+<!-- Budget -->
+<ENVELOPE>
+      <HEADER><VERSION>1</VERSION><TALLYREQUEST>Export</TALLYREQUEST>
+      <TYPE>Collection</TYPE><ID>Budget Collection</ID></HEADER>
+      <BODY><DESC>
+        <STATICVARIABLES><SVEXPORTFORMAT>$$SysName:XML</SVEXPORTFORMAT></STATICVARIABLES>
+        <TDL><TDLMESSAGE>
+          <COLLECTION NAME="Budget Collection" ISMODIFY="No" ISINITIALIZE="Yes">
+            <TYPE>Budget</TYPE>
+            <FETCH>NAME,FROMDATE,TODATE</FETCH>
+          </COLLECTION>
+        </TDLMESSAGE></TDL>
+      </DESC></BODY></ENVELOPE>

@@ -1,0 +1,13 @@
+<!-- Scenario -->
+<ENVELOPE>
+      <HEADER><VERSION>1</VERSION><TALLYREQUEST>Export</TALLYREQUEST>
+      <TYPE>Collection</TYPE><ID>Scenario Collection</ID></HEADER>
+      <BODY><DESC>
+        <STATICVARIABLES><SVEXPORTFORMAT>$$SysName:XML</SVEXPORTFORMAT></STATICVARIABLES>
+        <TDL><TDLMESSAGE>
+          <COLLECTION NAME="Scenario Collection" ISMODIFY="No" ISINITIALIZE="Yes">
+            <TYPE>Scenario</TYPE>
+            <FETCH>NAME,INCLUDEACTUALS,INCLUDENONVOUCHERS</FETCH>
+          </COLLECTION>
+        </TDLMESSAGE></TDL>
+      </DESC></BODY></ENVELOPE>

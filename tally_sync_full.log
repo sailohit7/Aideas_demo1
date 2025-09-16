@@ -1,0 +1,154 @@
+2025-09-14 08:22:25,950 [INFO] Attempting SQL connection to LOHITH\\SQLEXPRESS
+2025-09-14 08:22:31,298 [WARNING] Failed to connect to LOHITH\\SQLEXPRESS: ('08001', '[08001] [Microsoft][ODBC Driver 17 for SQL Server]SQL Server Network Interfaces: Error Locating Server/Instance Specified [xFFFFFFFF].  (-1) (SQLDriverConnect); [08001] [Microsoft][ODBC Driver 17 for SQL Server]Login timeout expired (0); [08001] [Microsoft][ODBC Driver 17 for SQL Server]A network-related or instance-specific error has occurred while establishing a connection to SQL Server. Server is not found or not accessible. Check if instance name is correct and if SQL Server is configured to allow remote connections. For more information see SQL Server Books Online. (-1)')
+2025-09-14 08:22:31,298 [INFO] Attempting SQL connection to 127.0.0.1,1433
+2025-09-14 08:22:31,577 [INFO] Connected to SQL Server: 127.0.0.1,1433
+2025-09-14 08:22:35,882 [INFO] Connected to database lohit on server 127.0.0.1,1433
+2025-09-14 08:22:37,657 [INFO] Fetching Ledger (fields: ['NAME', 'PARENT', 'OPENINGBALANCE', 'CLOSINGBALANCE'])
+2025-09-14 08:22:37,666 [WARNING] Tally returned unusual response for Ledger — saved tally_raw_unusual_Ledger_20250914_082237.xml
+2025-09-14 08:22:37,668 [WARNING] No records found for Ledger; raw saved to tally_raw_norecords_Ledger_20250914_082237.xml
+2025-09-14 08:22:37,674 [WARNING] No data parsed for Ledger
+2025-09-14 08:34:38,808 [INFO] Attempting SQL connection to LOHITH\\SQLEXPRESS
+2025-09-14 08:34:44,169 [WARNING] Failed to connect to LOHITH\\SQLEXPRESS: ('08001', '[08001] [Microsoft][ODBC Driver 17 for SQL Server]SQL Server Network Interfaces: Error Locating Server/Instance Specified [xFFFFFFFF].  (-1) (SQLDriverConnect); [08001] [Microsoft][ODBC Driver 17 for SQL Server]Login timeout expired (0); [08001] [Microsoft][ODBC Driver 17 for SQL Server]A network-related or instance-specific error has occurred while establishing a connection to SQL Server. Server is not found or not accessible. Check if instance name is correct and if SQL Server is configured to allow remote connections. For more information see SQL Server Books Online. (-1)')
+2025-09-14 08:34:44,169 [INFO] Attempting SQL connection to 127.0.0.1,1433
+2025-09-14 08:34:44,259 [INFO] Connected to SQL Server: 127.0.0.1,1433
+2025-09-14 08:34:51,932 [INFO] Connected to database lohit on server 127.0.0.1,1433
+2025-09-14 08:34:51,935 [INFO] Fetching Ledger (fields: ['NAME', 'PARENT', 'OPENINGBALANCE', 'CLOSINGBALANCE'])
+2025-09-14 08:34:51,946 [INFO] Saved raw response for Ledger -> tally_raw_Ledger_20250914_083451.xml
+2025-09-14 08:34:51,946 [WARNING] Tally returned unusual response for Ledger (no ENVELOPE) — saved tally_raw_Ledger_20250914_083451.xml
+2025-09-14 08:34:51,949 [WARNING] No records found for Ledger; raw saved to tally_raw_norecords_Ledger_20250914_083451.xml
+2025-09-14 08:34:51,957 [WARNING] No data parsed for Ledger
+2025-09-14 08:34:51,957 [INFO] Fetching Group (fields: ['NAME', 'PARENT'])
+2025-09-14 08:34:51,961 [INFO] Saved raw response for Group -> tally_raw_Group_20250914_083451.xml
+2025-09-14 08:34:51,961 [WARNING] Tally returned unusual response for Group (no ENVELOPE) — saved tally_raw_Group_20250914_083451.xml
+2025-09-14 08:34:51,962 [WARNING] No records found for Group; raw saved to tally_raw_norecords_Group_20250914_083451.xml
+2025-09-14 08:34:51,963 [WARNING] No data parsed for Group
+2025-09-14 08:34:51,963 [INFO] Fetching VoucherType (fields: ['NAME', 'ABBREVIATION', 'ISSUPPLY'])
+2025-09-14 08:34:51,969 [INFO] Saved raw response for VoucherType -> tally_raw_VoucherType_20250914_083451.xml
+2025-09-14 08:34:51,970 [WARNING] Tally returned unusual response for VoucherType (no ENVELOPE) — saved tally_raw_VoucherType_20250914_083451.xml
+2025-09-14 08:34:51,971 [WARNING] No records found for VoucherType; raw saved to tally_raw_norecords_VoucherType_20250914_083451.xml
+2025-09-14 08:34:51,972 [WARNING] No data parsed for VoucherType
+2025-09-14 08:34:51,972 [INFO] Fetching Currency (fields: ['NAME', 'ORIGINALNAME', 'ISOCURRENCYCODE'])
+2025-09-14 08:34:51,976 [INFO] Saved raw response for Currency -> tally_raw_Currency_20250914_083451.xml
+2025-09-14 08:34:51,977 [WARNING] Tally returned unusual response for Currency (no ENVELOPE) — saved tally_raw_Currency_20250914_083451.xml
+2025-09-14 08:34:51,977 [WARNING] No records found for Currency; raw saved to tally_raw_norecords_Currency_20250914_083451.xml
+2025-09-14 08:34:51,978 [WARNING] No data parsed for Currency
+2025-09-14 08:34:51,978 [INFO] Fetching Budget (fields: ['NAME', 'AMOUNT'])
+2025-09-14 08:34:51,984 [INFO] Saved raw response for Budget -> tally_raw_Budget_20250914_083451.xml
+2025-09-14 08:34:51,984 [WARNING] Tally returned unusual response for Budget (no ENVELOPE) — saved tally_raw_Budget_20250914_083451.xml
+2025-09-14 08:34:51,985 [WARNING] No records found for Budget; raw saved to tally_raw_norecords_Budget_20250914_083451.xml
+2025-09-14 08:34:51,986 [WARNING] No data parsed for Budget
+2025-09-14 08:34:51,986 [INFO] Fetching Scenario (fields: ['NAME'])
+2025-09-14 08:34:51,991 [INFO] Saved raw response for Scenario -> tally_raw_Scenario_20250914_083451.xml
+2025-09-14 08:34:51,991 [WARNING] Tally returned unusual response for Scenario (no ENVELOPE) — saved tally_raw_Scenario_20250914_083451.xml
+2025-09-14 08:34:51,992 [WARNING] No records found for Scenario; raw saved to tally_raw_norecords_Scenario_20250914_083451.xml
+2025-09-14 08:34:51,993 [WARNING] No data parsed for Scenario
+2025-09-14 08:34:51,993 [INFO] Fetching CostCentre (fields: ['NAME', 'PARENT'])
+2025-09-14 08:34:51,998 [INFO] Saved raw response for CostCentre -> tally_raw_CostCentre_20250914_083451.xml
+2025-09-14 08:34:51,998 [WARNING] Tally returned unusual response for CostCentre (no ENVELOPE) — saved tally_raw_CostCentre_20250914_083451.xml
+2025-09-14 08:34:52,000 [WARNING] No records found for CostCentre; raw saved to tally_raw_norecords_CostCentre_20250914_083451.xml
+2025-09-14 08:34:52,000 [WARNING] No data parsed for CostCentre
+2025-09-14 08:34:52,001 [INFO] Fetching CostCategory (fields: ['NAME'])
+2025-09-14 08:34:52,006 [INFO] Saved raw response for CostCategory -> tally_raw_CostCategory_20250914_083452.xml
+2025-09-14 08:34:52,006 [WARNING] Tally returned unusual response for CostCategory (no ENVELOPE) — saved tally_raw_CostCategory_20250914_083452.xml
+2025-09-14 08:34:52,007 [WARNING] No records found for CostCategory; raw saved to tally_raw_norecords_CostCategory_20250914_083452.xml
+2025-09-14 08:34:52,008 [WARNING] No data parsed for CostCategory
+2025-09-14 08:34:52,009 [INFO] Fetching InterestCollection (fields: ['NAME'])
+2025-09-14 08:34:52,014 [INFO] Saved raw response for InterestCollection -> tally_raw_InterestCollection_20250914_083452.xml
+2025-09-14 08:34:52,015 [WARNING] Tally returned unusual response for InterestCollection (no ENVELOPE) — saved tally_raw_InterestCollection_20250914_083452.xml
+2025-09-14 08:34:52,017 [WARNING] No records found for InterestCollection; raw saved to tally_raw_norecords_InterestCollection_20250914_083452.xml
+2025-09-14 08:34:52,018 [WARNING] No data parsed for InterestCollection
+2025-09-14 08:34:52,018 [INFO] Fetching StockGroup (fields: ['NAME', 'PARENT'])
+2025-09-14 08:34:52,022 [INFO] Saved raw response for StockGroup -> tally_raw_StockGroup_20250914_083452.xml
+2025-09-14 08:34:52,022 [WARNING] Tally returned unusual response for StockGroup (no ENVELOPE) — saved tally_raw_StockGroup_20250914_083452.xml
+2025-09-14 08:34:52,025 [WARNING] No records found for StockGroup; raw saved to tally_raw_norecords_StockGroup_20250914_083452.xml
+2025-09-14 08:34:52,026 [WARNING] No data parsed for StockGroup
+2025-09-14 08:34:52,027 [INFO] Fetching StockCategory (fields: ['NAME'])
+2025-09-14 08:34:52,032 [INFO] Saved raw response for StockCategory -> tally_raw_StockCategory_20250914_083452.xml
+2025-09-14 08:34:52,033 [WARNING] Tally returned unusual response for StockCategory (no ENVELOPE) — saved tally_raw_StockCategory_20250914_083452.xml
+2025-09-14 08:34:52,034 [WARNING] No records found for StockCategory; raw saved to tally_raw_norecords_StockCategory_20250914_083452.xml
+2025-09-14 08:34:52,035 [WARNING] No data parsed for StockCategory
+2025-09-14 08:34:52,035 [INFO] Fetching StockItem (fields: ['NAME', 'PARENT', 'BASEUNITS', 'OPENINGBALANCE'])
+2025-09-14 08:34:52,040 [INFO] Saved raw response for StockItem -> tally_raw_StockItem_20250914_083452.xml
+2025-09-14 08:34:52,041 [WARNING] Tally returned unusual response for StockItem (no ENVELOPE) — saved tally_raw_StockItem_20250914_083452.xml
+2025-09-14 08:34:52,042 [WARNING] No records found for StockItem; raw saved to tally_raw_norecords_StockItem_20250914_083452.xml
+2025-09-14 08:34:52,042 [WARNING] No data parsed for StockItem
+2025-09-14 08:34:52,043 [INFO] Fetching Unit (fields: ['NAME', 'INFORMALNAME'])
+2025-09-14 08:34:52,048 [INFO] Saved raw response for Unit -> tally_raw_Unit_20250914_083452.xml
+2025-09-14 08:34:52,049 [WARNING] Tally returned unusual response for Unit (no ENVELOPE) — saved tally_raw_Unit_20250914_083452.xml
+2025-09-14 08:34:52,050 [WARNING] No records found for Unit; raw saved to tally_raw_norecords_Unit_20250914_083452.xml
+2025-09-14 08:34:52,051 [WARNING] No data parsed for Unit
+2025-09-14 08:34:52,051 [INFO] Fetching Godown (fields: ['NAME', 'PARENT'])
+2025-09-14 08:34:52,058 [INFO] Saved raw response for Godown -> tally_raw_Godown_20250914_083452.xml
+2025-09-14 08:34:52,059 [WARNING] Tally returned unusual response for Godown (no ENVELOPE) — saved tally_raw_Godown_20250914_083452.xml
+2025-09-14 08:34:52,060 [WARNING] No records found for Godown; raw saved to tally_raw_norecords_Godown_20250914_083452.xml
+2025-09-14 08:34:52,061 [WARNING] No data parsed for Godown
+2025-09-14 08:34:52,061 [INFO] Fetching Batch (fields: ['NAME'])
+2025-09-14 08:34:52,075 [INFO] Saved raw response for Batch -> tally_raw_Batch_20250914_083452.xml
+2025-09-14 08:34:52,075 [WARNING] Tally returned unusual response for Batch (no ENVELOPE) — saved tally_raw_Batch_20250914_083452.xml
+2025-09-14 08:34:52,076 [WARNING] No records found for Batch; raw saved to tally_raw_norecords_Batch_20250914_083452.xml
+2025-09-14 08:34:52,076 [WARNING] No data parsed for Batch
+2025-09-14 08:34:52,077 [INFO] Fetching VoucherClass (fields: ['NAME'])
+2025-09-14 08:34:52,081 [INFO] Saved raw response for VoucherClass -> tally_raw_VoucherClass_20250914_083452.xml
+2025-09-14 08:34:52,081 [WARNING] Tally returned unusual response for VoucherClass (no ENVELOPE) — saved tally_raw_VoucherClass_20250914_083452.xml
+2025-09-14 08:34:52,082 [WARNING] No records found for VoucherClass; raw saved to tally_raw_norecords_VoucherClass_20250914_083452.xml
+2025-09-14 08:34:52,083 [WARNING] No data parsed for VoucherClass
+2025-09-14 08:34:52,083 [INFO] Fetching EmployeeGroup (fields: ['NAME'])
+2025-09-14 08:34:52,089 [INFO] Saved raw response for EmployeeGroup -> tally_raw_EmployeeGroup_20250914_083452.xml
+2025-09-14 08:34:52,089 [WARNING] Tally returned unusual response for EmployeeGroup (no ENVELOPE) — saved tally_raw_EmployeeGroup_20250914_083452.xml
+2025-09-14 08:34:52,090 [WARNING] No records found for EmployeeGroup; raw saved to tally_raw_norecords_EmployeeGroup_20250914_083452.xml
+2025-09-14 08:34:52,091 [WARNING] No data parsed for EmployeeGroup
+2025-09-14 08:34:52,091 [INFO] Fetching Employee (fields: ['NAME', 'EMPLOYEEID'])
+2025-09-14 08:34:52,095 [INFO] Saved raw response for Employee -> tally_raw_Employee_20250914_083452.xml
+2025-09-14 08:34:52,096 [WARNING] Tally returned unusual response for Employee (no ENVELOPE) — saved tally_raw_Employee_20250914_083452.xml
+2025-09-14 08:34:52,097 [WARNING] No records found for Employee; raw saved to tally_raw_norecords_Employee_20250914_083452.xml
+2025-09-14 08:34:52,097 [WARNING] No data parsed for Employee
+2025-09-14 08:34:52,097 [INFO] Fetching AttendanceType (fields: ['NAME'])
+2025-09-14 08:34:52,103 [INFO] Saved raw response for AttendanceType -> tally_raw_AttendanceType_20250914_083452.xml
+2025-09-14 08:34:52,104 [WARNING] Tally returned unusual response for AttendanceType (no ENVELOPE) — saved tally_raw_AttendanceType_20250914_083452.xml
+2025-09-14 08:34:52,105 [WARNING] No records found for AttendanceType; raw saved to tally_raw_norecords_AttendanceType_20250914_083452.xml
+2025-09-14 08:34:52,108 [WARNING] No data parsed for AttendanceType
+2025-09-14 08:34:52,125 [INFO] Fetching PayHead (fields: ['NAME'])
+2025-09-14 08:34:52,131 [INFO] Saved raw response for PayHead -> tally_raw_PayHead_20250914_083452.xml
+2025-09-14 08:34:52,136 [WARNING] Tally returned unusual response for PayHead (no ENVELOPE) — saved tally_raw_PayHead_20250914_083452.xml
+2025-09-14 08:34:52,137 [WARNING] No records found for PayHead; raw saved to tally_raw_norecords_PayHead_20250914_083452.xml
+2025-09-14 08:34:52,141 [WARNING] No data parsed for PayHead
+2025-09-14 08:34:52,143 [INFO] Fetching SalaryDetails (fields: ['NAME'])
+2025-09-14 08:34:52,149 [INFO] Saved raw response for SalaryDetails -> tally_raw_SalaryDetails_20250914_083452.xml
+2025-09-14 08:34:52,154 [WARNING] Tally returned unusual response for SalaryDetails (no ENVELOPE) — saved tally_raw_SalaryDetails_20250914_083452.xml
+2025-09-14 08:34:52,156 [WARNING] No records found for SalaryDetails; raw saved to tally_raw_norecords_SalaryDetails_20250914_083452.xml
+2025-09-14 08:34:52,157 [WARNING] No data parsed for SalaryDetails
+2025-09-14 08:34:52,158 [INFO] Fetching Company (fields: ['NAME', 'STARTINGFROM', 'BOOKSFROM'])
+2025-09-14 08:34:52,164 [INFO] Saved raw response for Company -> tally_raw_Company_20250914_083452.xml
+2025-09-14 08:34:52,165 [WARNING] Tally returned unusual response for Company (no ENVELOPE) — saved tally_raw_Company_20250914_083452.xml
+2025-09-14 08:34:52,166 [WARNING] No records found for Company; raw saved to tally_raw_norecords_Company_20250914_083452.xml
+2025-09-14 08:34:52,166 [WARNING] No data parsed for Company
+2025-09-14 08:34:52,167 [INFO] Fetching SecurityControl (fields: ['NAME'])
+2025-09-14 08:34:52,181 [INFO] Saved raw response for SecurityControl -> tally_raw_SecurityControl_20250914_083452.xml
+2025-09-14 08:34:52,182 [WARNING] Tally returned unusual response for SecurityControl (no ENVELOPE) — saved tally_raw_SecurityControl_20250914_083452.xml
+2025-09-14 08:34:52,184 [WARNING] No records found for SecurityControl; raw saved to tally_raw_norecords_SecurityControl_20250914_083452.xml
+2025-09-14 08:34:52,185 [WARNING] No data parsed for SecurityControl
+2025-09-14 08:34:52,186 [INFO] Fetching StatutoryFeature (fields: ['NAME'])
+2025-09-14 08:34:52,190 [INFO] Saved raw response for StatutoryFeature -> tally_raw_StatutoryFeature_20250914_083452.xml
+2025-09-14 08:34:52,190 [WARNING] Tally returned unusual response for StatutoryFeature (no ENVELOPE) — saved tally_raw_StatutoryFeature_20250914_083452.xml
+2025-09-14 08:34:52,192 [WARNING] No records found for StatutoryFeature; raw saved to tally_raw_norecords_StatutoryFeature_20250914_083452.xml
+2025-09-14 08:34:52,192 [WARNING] No data parsed for StatutoryFeature
+2025-09-14 16:28:39,749 [INFO] Attempting SQL connection to LOHITH\\SQLEXPRESS
+2025-09-14 16:28:45,029 [WARNING] Failed to connect to LOHITH\\SQLEXPRESS: ('08001', '[08001] [Microsoft][ODBC Driver 17 for SQL Server]SQL Server Network Interfaces: Error Locating Server/Instance Specified [xFFFFFFFF].  (-1) (SQLDriverConnect); [08001] [Microsoft][ODBC Driver 17 for SQL Server]Login timeout expired (0); [08001] [Microsoft][ODBC Driver 17 for SQL Server]A network-related or instance-specific error has occurred while establishing a connection to SQL Server. Server is not found or not accessible. Check if instance name is correct and if SQL Server is configured to allow remote connections. For more information see SQL Server Books Online. (-1)')
+2025-09-14 16:28:45,030 [INFO] Attempting SQL connection to 127.0.0.1,1433
+2025-09-14 16:28:45,086 [INFO] Connected to SQL Server: 127.0.0.1,1433
+2025-09-14 16:28:48,674 [INFO] Connected to database lohit on server 127.0.0.1,1433
+2025-09-14 16:28:50,589 [INFO] Fetching Ledger (fields: ['NAME', 'PARENT', 'OPENINGBALANCE', 'CLOSINGBALANCE'])
+2025-09-14 16:28:50,596 [INFO] Saved raw response for Ledger -> tally_raw_Ledger_20250914_162850.xml
+2025-09-14 16:28:50,596 [WARNING] Tally returned unusual response for Ledger (no ENVELOPE) — saved tally_raw_Ledger_20250914_162850.xml
+2025-09-14 16:28:50,598 [WARNING] No records found for Ledger; raw saved to tally_raw_norecords_Ledger_20250914_162850.xml
+2025-09-14 16:28:50,600 [WARNING] No data parsed for Ledger
+2025-09-15 08:33:13,870 [INFO] Attempting SQL connection to LOHITH\\SQLEXPRESS
+2025-09-15 08:33:19,177 [WARNING] Failed to connect to LOHITH\\SQLEXPRESS: ('08001', '[08001] [Microsoft][ODBC Driver 17 for SQL Server]SQL Server Network Interfaces: Error Locating Server/Instance Specified [xFFFFFFFF].  (-1) (SQLDriverConnect); [08001] [Microsoft][ODBC Driver 17 for SQL Server]Login timeout expired (0); [08001] [Microsoft][ODBC Driver 17 for SQL Server]A network-related or instance-specific error has occurred while establishing a connection to SQL Server. Server is not found or not accessible. Check if instance name is correct and if SQL Server is configured to allow remote connections. For more information see SQL Server Books Online. (-1)')
+2025-09-15 08:33:19,177 [INFO] Attempting SQL connection to 127.0.0.1,1433
+2025-09-15 08:33:19,214 [INFO] Connected to SQL Server: 127.0.0.1,1433
+2025-09-15 08:33:20,515 [INFO] Connected to database lohit on server 127.0.0.1,1433
+2025-09-15 08:33:21,919 [INFO] Fetching Ledger (fields: ['NAME', 'PARENT', 'OPENINGBALANCE', 'CLOSINGBALANCE'])
+2025-09-15 08:33:21,926 [INFO] Saved raw response for Ledger -> tally_raw_Ledger_20250915_083321.xml
+2025-09-15 08:33:21,927 [WARNING] Tally returned unusual response for Ledger (no ENVELOPE) — saved tally_raw_Ledger_20250915_083321.xml
+2025-09-15 08:33:21,929 [WARNING] No records found for Ledger; raw saved to tally_raw_norecords_Ledger_20250915_083321.xml
+2025-09-15 08:33:21,930 [WARNING] No data parsed for Ledger
