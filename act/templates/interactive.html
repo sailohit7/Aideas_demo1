@@ -1,0 +1,321 @@
+{% extends "layout.html" %}
+{% block content %}
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+
+<style>
+  :root {
+    --bg1: #0a0f23;
+    --bg2: #16213e;
+    --accent: #00bcd4;
+    --accent2: #007bff;
+    --success: #10b981;
+    --warn: #f6c84c;
+    --muted: #94a3b8;
+  }
+
+  body {
+    background: radial-gradient(ellipse at top, var(--bg2), var(--bg1));
+    color: #f5f7f9;
+    font-family: "Inter", sans-serif;
+    overflow-x: hidden;
+  }
+
+  .page-hero {
+    text-align: center;
+    margin-bottom: 1.5rem;
+    animation: fadeDrop 600ms cubic-bezier(.2, .9, .3, 1);
+  }
+  @keyframes fadeDrop {
+    from { opacity: 0; transform: translateY(-15px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+
+  .panel {
+    background: rgba(255, 255, 255, 0.04);
+    border-radius: 16px;
+    padding: 1.8rem;
+    box-shadow: 0 6px 22px rgba(0, 0, 0, 0.5);
+    margin-bottom: 1.5rem;
+  }
+
+  select, input.form-control {
+    background-color: rgba(255, 255, 255, 0.08);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    color: #fff;
+  }
+
+  .btn-ghost {
+    background: rgba(255, 255, 255, 0.08);
+    border: none;
+    color: var(--muted);
+    border-radius: 10px;
+    padding: .6rem 1rem;
+    transition: all 0.2s;
+  }
+  .btn-ghost:hover { background: rgba(255, 255, 255, 0.15); color: #fff; }
+
+  #logBox {
+    background: #050505;
+    color: #78ff84;
+    font-family: monospace;
+    height: 360px;
+    overflow-y: auto;
+    border-radius: 10px;
+    padding: 1rem;
+    border: 1px solid rgba(255,255,255,0.05);
+  }
+
+  .log-line { opacity: 0; transform: translateY(4px); animation: fadeInUp 0.35s ease forwards; }
+  @keyframes fadeInUp { to { opacity: 1; transform: translateY(0); } }
+
+  /* Floating Action Buttons */
+  .fab-container {
+    position: fixed;
+    bottom: 28px;
+    right: 30px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    gap: 14px;
+    z-index: 1050;
+  }
+  .fab {
+    width: 58px;
+    height: 58px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-size: 1.5rem;
+    box-shadow: 0 4px 18px rgba(0, 0, 0, 0.5);
+    cursor: pointer;
+    transition: all .25s ease;
+  }
+  .fab:hover { transform: scale(1.08); }
+  .fab-main { background: linear-gradient(135deg, var(--accent2), var(--accent)); }
+  .fab-secondary { background: linear-gradient(135deg, var(--success), #16a34a); }
+  .fab-tertiary { background: linear-gradient(135deg, #64748b, #475569); }
+
+  /* Slide-over Master Panel */
+  #masterPanel {
+    position: fixed;
+    top: 0;
+    right: -480px;
+    width: 420px;
+    height: 100%;
+    background: rgba(10, 15, 30, 0.95);
+    backdrop-filter: blur(10px);
+    color: #fff;
+    padding: 1.8rem;
+    transition: right 0.4s ease;
+    box-shadow: -8px 0 30px rgba(0,0,0,0.6);
+    overflow-y: auto;
+    z-index: 2000;
+  }
+  #masterPanel.active { right: 0; }
+
+  .loading-dot {
+    display: inline-block;
+    width: 6px;
+    height: 6px;
+    margin-left: 3px;
+    border-radius: 50%;
+    background: #fff;
+    animation: dotPulse 1.4s infinite ease-in-out both;
+  }
+  @keyframes dotPulse {
+    0%,80%,100%{opacity:0;}
+    40%{opacity:1;}
+  }
+</style>
+
+<div class="container">
+  <div class="page-hero">
+    <h2 class="fw-bold">⚙️ Interactive Mode</h2>
+    <p class="text-muted small">Configure, select, and sync your Tally masters with live feedback.</p>
+  </div>
+
+  <!-- Database Setup -->
+  <div class="panel mb-4">
+    <div class="d-flex justify-content-between align-items-start mb-3">
+      <h5 class="mb-0">🗄 Database Setup</h5>
+      <small class="text-muted">Select or create database</small>
+    </div>
+
+    <div class="row g-3 align-items-center">
+      <div class="col-md-5">
+        <select id="databaseSelect" class="form-select"></select>
+      </div>
+      <div class="col-auto">
+        <button class="btn-ghost" onclick="fetchDatabases()"><i class="bi bi-arrow-clockwise"></i> Refresh</button>
+      </div>
+      <div class="col-md-5 d-flex">
+        <input id="newDbName" class="form-control me-2" placeholder="New DB name">
+        <button class="btn-ghost" onclick="createDatabase()"><i class="bi bi-plus-lg text-success"></i> Create</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Action Buttons Row -->
+  <div class="container mt-3 mb-3">
+    <div style="display:flex;gap:12px;align-items:center;justify-content:flex-start;">
+      <button class="btn btn-outline-light" onclick="openMasterPanel()">
+        <i class="bi bi-folder2-open me-1"></i> Select Masters
+      </button>
+
+      <button id="startSyncBtn" class="btn btn-primary" onclick="startInteractive()">
+        <i class="bi bi-play-fill me-1"></i> Start Sync
+      </button>
+
+      <button class="btn btn-secondary" onclick="window.location='/runonce'">
+        <i class="bi bi-lightning-charge me-1"></i> Run Once
+      </button>
+
+      <div id="syncStatus" style="margin-left:14px;color:#9fb0bd;font-size:0.95rem;">Idle</div>
+    </div>
+  </div>
+
+  <!-- Logs -->
+  <div class="panel">
+    <div class="d-flex justify-content-between align-items-center mb-3">
+      <h5 class="mb-0">📜 Live Logs</h5>
+      <button class="btn-ghost btn-sm" onclick="clearLogs()">🧹 Clear</button>
+    </div>
+    <div id="logBox"></div>
+  </div>
+</div>
+
+<!-- Floating Buttons -->
+<div class="fab-container">
+  <div class="fab fab-secondary" title="Select Masters" onclick="openMasterPanel()">
+    <i class="bi bi-folder2-open"></i>
+  </div>
+  <div class="fab fab-main" title="Start Sync" id="syncFab" onclick="startInteractive()">
+    <i class="bi bi-play-fill"></i>
+  </div>
+  <div class="fab fab-tertiary" title="Quick Run Once" onclick="window.location='/runonce'">
+    <i class="bi bi-lightning-charge"></i>
+  </div>
+</div>
+
+<!-- Slide-over Master Panel -->
+<div id="masterPanel">
+  <div class="d-flex justify-content-between align-items-center mb-3">
+    <h5>🗂 Select Masters</h5>
+    <button class="btn btn-sm btn-outline-light" onclick="closeMasterPanel()">&times;</button>
+  </div>
+
+  <div id="mastersForm">
+    <h6 class="text-muted">Accounting</h6>
+    <div class="form-check"><input class="form-check-input" type="checkbox" value="Ledger"> Ledger</div>
+    <div class="form-check"><input class="form-check-input" type="checkbox" value="Group"> Group</div>
+    <div class="form-check"><input class="form-check-input" type="checkbox" value="VoucherType"> Voucher Type</div>
+    <div class="form-check"><input class="form-check-input" type="checkbox" value="Currency"> Currency</div>
+    <div class="form-check"><input class="form-check-input" type="checkbox" value="Budget"> Budget</div>
+
+    <h6 class="text-muted mt-3">Inventory</h6>
+    <div class="form-check"><input class="form-check-input" type="checkbox" value="StockGroup"> Stock Group</div>
+    <div class="form-check"><input class="form-check-input" type="checkbox" value="StockCategory"> Stock Category</div>
+    <div class="form-check"><input class="form-check-input" type="checkbox" value="StockItem"> Stock Item</div>
+    <div class="form-check"><input class="form-check-input" type="checkbox" value="Unit"> Unit</div>
+    <div class="form-check"><input class="form-check-input" type="checkbox" value="Godown"> Godown</div>
+
+    <h6 class="text-muted mt-3">Payroll & Others</h6>
+    <div class="form-check"><input class="form-check-input" type="checkbox" value="Employee"> Employee</div>
+    <div class="form-check"><input class="form-check-input" type="checkbox" value="AttendanceType"> Attendance Type</div>
+    <div class="form-check"><input class="form-check-input" type="checkbox" value="Company"> Company</div>
+    <div class="form-check"><input class="form-check-input" type="checkbox" value="CostCentre"> Cost Centre</div>
+    <div class="form-check"><input class="form-check-input" type="checkbox" value="CostCategory"> Cost Category</div>
+  </div>
+
+  <hr>
+  <button class="btn btn-success w-100" onclick="saveMasters()">💾 Save Masters</button>
+</div>
+
+<script>
+/* DB Fetch */
+async function fetchDatabases() {
+  try {
+    const res = await fetch('/get_databases');
+    const data = await res.json();
+    const sel = document.getElementById('databaseSelect');
+    sel.innerHTML = '';
+    if (data.databases?.length) {
+      data.databases.forEach(db => sel.innerHTML += `<option>${db}</option>`);
+    } else sel.innerHTML = '<option>No databases found</option>';
+  } catch (e) { console.error(e); }
+}
+fetchDatabases();
+
+/* Create DB */
+async function createDatabase() {
+  const name = document.getElementById('newDbName').value.trim();
+  if (!name) return alert('Enter a DB name.');
+  const res = await fetch('/create_database', {method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({ name })});
+  const data = await res.json();
+  alert(data.message || data.error);
+  fetchDatabases();
+}
+
+/* Master Panel */
+function openMasterPanel(){ document.getElementById('masterPanel').classList.add('active'); }
+function closeMasterPanel(){ document.getElementById('masterPanel').classList.remove('active'); }
+
+/* Save Masters */
+async function saveMasters(){
+  const selected = Array.from(document.querySelectorAll('#mastersForm input:checked')).map(x=>x.value);
+  if (!selected.length) return alert('Select at least one master.');
+  await fetch('/save_masters',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({masters:selected})});
+  alert('Masters saved successfully.');
+  closeMasterPanel();
+}
+
+/* Start Sync */
+async function startInteractive() {
+  const fab = document.getElementById('syncFab');
+  const db = document.getElementById('databaseSelect').value;
+  const btn = document.getElementById('startSyncBtn');
+  if (!db) return alert('Select a database first.');
+
+  btn.disabled = true;
+  btn.innerHTML = '<span class="spinner-border spinner-border-sm"></span> Starting...';
+  document.getElementById('syncStatus').textContent = 'Starting...';
+  fab.innerHTML = `<div class="loading-dot"></div><div class="loading-dot"></div><div class="loading-dot"></div>`;
+
+  try {
+    await fetch(`/run/interactive?db=${encodeURIComponent(db)}`);
+    addLog(`▶ Sync started for ${db}`);
+  } catch (e) { addLog('⚠ Failed to start sync'); }
+
+  setTimeout(() => {
+    btn.disabled = false;
+    btn.innerHTML = '<i class="bi bi-play-fill me-1"></i> Start Sync';
+    document.getElementById('syncStatus').textContent = 'Idle';
+    fab.innerHTML = '<i class="bi bi-play-fill"></i>';
+  }, 2500);
+}
+
+/* Logs */
+async function fetchLogs(){
+  try {
+    const res = await fetch('/get_logs');
+    const data = await res.json();
+    const box = document.getElementById('logBox');
+    box.innerHTML = data.logs.map(line=>`<div class='log-line'>${line}</div>`).join('');
+    box.scrollTop = box.scrollHeight;
+  }catch(e){console.error(e);}
+}
+function clearLogs(){document.getElementById('logBox').innerHTML='';}
+setInterval(fetchLogs, 2000);
+
+function addLog(msg){
+  const box = document.getElementById('logBox');
+  const div = document.createElement('div');
+  div.className = 'log-line';
+  div.textContent = `[${new Date().toLocaleTimeString()}] ${msg}`;
+  box.appendChild(div);
+  box.scrollTop = box.scrollHeight;
+}
+</script>
+{% endblock %}

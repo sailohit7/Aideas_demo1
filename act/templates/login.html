@@ -1,0 +1,72 @@
+{% extends "layout.html" %}
+{% block content %}
+<style>
+  .login-box {
+    max-width: 400px;
+    margin: 100px auto;
+    background: linear-gradient(180deg, rgba(0,0,0,0.9), rgba(10,10,10,0.95));
+    border-radius: 16px;
+    box-shadow: 0 20px 60px rgba(0,0,0,0.65);
+    padding: 2.5rem;
+    text-align: center;
+    color: var(--text-yellow);
+    animation: floatUp 0.8s cubic-bezier(.2,.9,.3,1) both;
+  }
+
+  .login-box i {
+    font-size: 50px;
+    color: var(--accent);
+    margin-bottom: 15px;
+  }
+
+  .login-box h2 {
+    font-weight: 700;
+    color: var(--text-yellow);
+    margin-bottom: 0.4rem;
+  }
+
+  .login-box p {
+    color: var(--muted);
+    margin-bottom: 1.6rem;
+  }
+
+  .btn-login {
+    background: linear-gradient(90deg, #ffd400, #ffcc00);
+    color: #111;
+    font-weight: 700;
+    border: none;
+    border-radius: 10px;
+    padding: 10px 18px;
+    width: 100%;
+    transition: all 0.25s ease;
+    box-shadow: 0 0 20px rgba(255, 204, 0, 0.1);
+  }
+
+  .btn-login:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 0 25px rgba(255, 204, 0, 0.3);
+  }
+
+  .login-note {
+    color: var(--muted);
+    font-size: 0.85rem;
+    margin-top: 1rem;
+  }
+</style>
+
+<div class="login-box fade-up">
+  <i class="bi bi-lock-fill"></i>
+  <h2>Welcome to Sync Portal</h2>
+  <p>Tally → SQL Sync Dashboard</p>
+
+  <form action="{{ url_for('do_login') }}" method="POST">
+    <button type="submit" class="btn-login">
+      <i class="bi bi-box-arrow-in-right"></i> Login
+    </button>
+  </form>
+
+  <div class="login-note">
+    <i class="bi bi-info-circle"></i> One-click login for testing environment
+  </div>
+</div>
+{% endblock %}

@@ -1,0 +1,22 @@
+{% extends "layout.html" %}
+{% block content %}
+<h2 class="fw-bold mb-4 animate__animated animate__fadeInDown">🧾 Logs</h2>
+
+<div class="card shadow-lg border-0 animate__animated animate__fadeInUp">
+  <div class="card-header bg-dark text-white d-flex justify-content-between">
+    <span><i class="bi bi-terminal"></i> Live Logs</span>
+    <button class="btn btn-sm btn-light" onclick="clearLogs()">🧹 Clear</button>
+  </div>
+  <div class="card-body bg-black text-success" style="height:350px; overflow-y:auto; font-family:monospace;" id="logBox"></div>
+</div>
+
+<script>
+setInterval(fetchLogs,2000);
+async function fetchLogs(){
+  const res=await fetch('/get_logs');
+  const data=await res.json();
+  document.getElementById('logBox').innerHTML=data.logs.map((l,i)=>`<div>${i+1}. ${l}</div>`).join('');
+}
+function clearLogs(){document.getElementById('logBox').innerHTML='';}
+</script>
+{% endblock %}

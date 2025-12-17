@@ -1,0 +1,24 @@
+{% extends "layout.html" %}
+{% block content %}
+<h2 class="fw-bold mb-4 animate__animated animate__fadeInDown">📘 Masters</h2>
+
+<div class="card shadow-lg border-0 p-4 animate__animated animate__fadeInUp">
+  <form id="masterForm" class="row g-2">
+    <div class="col-md-3"><label><input type="checkbox" value="Company"> Company</label></div>
+    <div class="col-md-3"><label><input type="checkbox" value="Ledger"> Ledger</label></div>
+    <div class="col-md-3"><label><input type="checkbox" value="Group"> Group</label></div>
+    <div class="col-md-3"><label><input type="checkbox" value="StockItem"> Stock Item</label></div>
+  </form>
+  <button class="btn btn-success mt-3" onclick="saveMasters()">💾 Save Masters</button>
+  <div id="masterMsg" class="mt-3"></div>
+</div>
+
+<script>
+async function saveMasters(){
+  const masters=Array.from(document.querySelectorAll('#masterForm input:checked')).map(x=>x.value);
+  const res=await fetch('/save_masters',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({masters})});
+  const data=await res.json();
+  document.getElementById('masterMsg').innerHTML=`<div class='alert alert-success'>${data.message}</div>`;
+}
+</script>
+{% endblock %}

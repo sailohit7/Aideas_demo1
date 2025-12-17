@@ -1,0 +1,73 @@
+{% extends "layout.html" %}
+{% block content %}
+<div class="page-hero mb-4">
+  <h2 class="fw-bold text-center" style="color:var(--text-yellow)">📊 Dashboard</h2>
+  <p class="muted text-center">Quick actions — run full syncs, open logs, or view downloads.</p>
+</div>
+
+<div class="dash-grid">
+  <!-- Interactive Run (left) -->
+  <div class="panel panel-hover tile fade-up fade-up-delay-1">
+    <div>
+      <div style="font-size:46px; color:var(--accent)"><i class="bi bi-cpu"></i></div>
+      <h4 class="mt-3" style="color:var(--text-yellow)">Interactive Run</h4>
+      <p class="muted small">Run individual syncs manually with full control.</p>
+      <div class="mt-3">
+        <a href="{{ url_for('interactive') }}" class="btn-ghost" title="Open Interactive Run">Open</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- Scheduler (center) -->
+  <div class="panel panel-hover tile fade-up fade-up-delay-2">
+    <div>
+      <div style="font-size:46px; color:#ffcc33"><i class="bi bi-calendar-week"></i></div>
+      <h4 class="mt-3" style="color:var(--text-yellow)">Scheduler</h4>
+      <p class="muted small">Automate regular syncs (interval, daily, monthly, yearly).</p>
+      <div class="mt-3">
+        <a href="{{ url_for('scheduler') }}" class="btn-ghost" title="Open Scheduler">Schedule</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- Downloads (right) -->
+  <div class="panel panel-hover tile fade-up fade-up-delay-3">
+    <div>
+      <div style="font-size:46px; color:#4fd6ff"><i class="bi bi-download"></i></div>
+      <h4 class="mt-3" style="color:var(--text-yellow)">Downloads</h4>
+      <p class="muted small">Export or download sync data and view past exports.</p>
+      <div class="mt-3">
+        <a href="{{ url_for('downloads') }}" class="btn-ghost" title="Open Downloads">Open</a>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="row g-4" style="margin-top:1.6rem;">
+  <div class="col-md-6">
+    <div class="panel panel-hover fade-up" style="padding:1.8rem;">
+      <div class="d-flex gap-3 align-items-start">
+        <div style="font-size:36px; color:#4fd6ff"><i class="bi bi-terminal"></i></div>
+        <div>
+          <h5 style="color:var(--text-yellow)">Live Logs</h5>
+          <p class="muted">View real-time sync logs and recent activity.</p>
+          <a href="{{ url_for('logs_page') }}" class="btn-ghost">Open Logs</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="col-md-6">
+    <div class="panel panel-hover fade-up" style="padding:1.8rem;">
+      <div class="d-flex gap-3 align-items-start">
+        <div style="font-size:36px; color:#bebebe"><i class="bi bi-clock-history"></i></div>
+        <div>
+          <h5 style="color:var(--text-yellow)">Sync History</h5>
+          <p class="muted">See completed sync runs and timestamps.</p>
+          <a href="{{ url_for('history') }}" class="btn-ghost">Open History</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+{% endblock %}

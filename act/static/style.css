@@ -1,0 +1,30 @@
+:root {
+  --bg1: #0b1723;
+  --bg2: #142834;
+  --accent-yellow: #ffd400;
+  --muted: rgba(255,255,255,0.45);
+}
+
+/* generic button styles used across pages */
+.btn {
+  transition: all .18s ease;
+}
+.btn.primary:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 10px 30px rgba(255,212,0,0.12);
+}
+
+/* navigation highlight for Downloads link */
+.nav a.downloads-link { color: var(--accent-yellow); }
+
+/* card dark / black look used on dashboard */
+.card-black {
+  background: #0b0b0b;
+  color: #ffd400;
+  border-radius: 14px;
+  padding: 22px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.6);
+}
+
+/* small utility */
+.muted { color: var(--muted); }

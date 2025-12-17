@@ -1,0 +1,49 @@
+2025-10-19 17:01:54,235 [INFO] [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://10.62.57.159:5000
+2025-10-19 17:01:54,236 [INFO] [33mPress CTRL+C to quit[0m
+2025-10-19 17:01:54,238 [INFO]  * Restarting with stat
+2025-10-19 17:01:55,708 [WARNING]  * Debugger is active!
+2025-10-19 17:01:55,721 [INFO]  * Debugger PIN: 595-660-213
+2025-10-19 17:02:57,084 [INFO] 127.0.0.1 - - [19/Oct/2025 17:02:57] "GET / HTTP/1.1" 200 -
+2025-10-19 17:02:57,153 [INFO] 127.0.0.1 - - [19/Oct/2025 17:02:57] "GET /static/style.css HTTP/1.1" 200 -
+2025-10-19 17:02:57,215 [INFO] 127.0.0.1 - - [19/Oct/2025 17:02:57] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2025-10-19 17:02:58,163 [INFO] 127.0.0.1 - - [19/Oct/2025 17:02:58] "GET /logs HTTP/1.1" 200 -
+2025-10-19 17:02:59,159 [INFO] 127.0.0.1 - - [19/Oct/2025 17:02:59] "GET /logs HTTP/1.1" 200 -
+2025-10-19 17:03:00,160 [INFO] 127.0.0.1 - - [19/Oct/2025 17:03:00] "GET /logs HTTP/1.1" 200 -
+2025-10-19 17:03:01,163 [INFO] 127.0.0.1 - - [19/Oct/2025 17:03:01] "GET /logs HTTP/1.1" 200 -
+2025-10-19 17:03:01,171 [INFO] 127.0.0.1 - - [19/Oct/2025 17:03:01] "GET /run/interactive HTTP/1.1" 200 -
+2025-10-19 17:03:02,059 [INFO] 127.0.0.1 - - [19/Oct/2025 17:03:02] "GET /run/interactive HTTP/1.1" 200 -
+2025-10-19 17:03:02,176 [INFO] 127.0.0.1 - - [19/Oct/2025 17:03:02] "GET /logs HTTP/1.1" 200 -
+2025-10-19 17:03:03,159 [INFO] 127.0.0.1 - - [19/Oct/2025 17:03:03] "GET /logs HTTP/1.1" 200 -
+2025-10-19 17:03:04,166 [INFO] 127.0.0.1 - - [19/Oct/2025 17:03:04] "GET /logs HTTP/1.1" 200 -
+2025-10-19 17:03:05,160 [INFO] 127.0.0.1 - - [19/Oct/2025 17:03:05] "GET /logs HTTP/1.1" 200 -
+2025-10-19 17:03:06,164 [INFO] 127.0.0.1 - - [19/Oct/2025 17:03:06] "GET /logs HTTP/1.1" 200 -
+2025-10-19 17:03:06,520 [WARNING] Failed SQL connection to LOHITH\\SQLEXPRESS: ('08001', '[08001] [Microsoft][ODBC Driver 17 for SQL Server]SQL Server Network Interfaces: Error Locating Server/Instance Specified [xFFFFFFFF].  (-1) (SQLDriverConnect); [08001] [Microsoft][ODBC Driver 17 for SQL Server]Login timeout expired (0); [08001] [Microsoft][ODBC Driver 17 for SQL Server]A network-related or instance-specific error has occurred while establishing a connection to SQL Server. Server is not found or not accessible. Check if instance name is correct and if SQL Server is configured to allow remote connections. For more information see SQL Server Books Online. (-1)')
+2025-10-19 17:03:06,587 [INFO] Connected to SQL Server: 127.0.0.1,1433
+2025-10-19 17:03:07,165 [INFO] 127.0.0.1 - - [19/Oct/2025 17:03:07] "GET /logs HTTP/1.1" 200 -
+2025-10-19 17:03:07,308 [WARNING] Failed SQL connection to LOHITH\\SQLEXPRESS: ('08001', '[08001] [Microsoft][ODBC Driver 17 for SQL Server]SQL Server Network Interfaces: Error Locating Server/Instance Specified [xFFFFFFFF].  (-1) (SQLDriverConnect); [08001] [Microsoft][ODBC Driver 17 for SQL Server]Login timeout expired (0); [08001] [Microsoft][ODBC Driver 17 for SQL Server]A network-related or instance-specific error has occurred while establishing a connection to SQL Server. Server is not found or not accessible. Check if instance name is correct and if SQL Server is configured to allow remote connections. For more information see SQL Server Books Online. (-1)')
+2025-10-19 17:03:07,314 [INFO] Connected to SQL Server: 127.0.0.1,1433
+2025-10-19 17:03:08,167 [INFO] 127.0.0.1 - - [19/Oct/2025 17:03:08] "GET /logs HTTP/1.1" 200 -
+2025-10-19 17:03:09,146 [INFO] 127.0.0.1 - - [19/Oct/2025 17:03:09] "GET /run/runonce HTTP/1.1" 200 -
+2025-10-19 17:03:09,162 [INFO] 127.0.0.1 - - [19/Oct/2025 17:03:09] "GET /logs HTTP/1.1" 200 -
+2025-10-19 17:03:10,165 [INFO] 127.0.0.1 - - [19/Oct/2025 17:03:10] "GET /logs HTTP/1.1" 200 -
+2025-10-19 17:03:11,165 [INFO] 127.0.0.1 - - [19/Oct/2025 17:03:11] "GET /logs HTTP/1.1" 200 -
+2025-10-19 17:03:11,327 [INFO] 127.0.0.1 - - [19/Oct/2025 17:03:11] "GET /run/scheduler HTTP/1.1" 200 -
+2025-10-19 17:03:12,162 [INFO] 127.0.0.1 - - [19/Oct/2025 17:03:12] "GET /logs HTTP/1.1" 200 -
+2025-10-19 17:03:13,161 [INFO] 127.0.0.1 - - [19/Oct/2025 17:03:13] "GET /logs HTTP/1.1" 200 -
+2025-10-19 17:03:14,165 [INFO] 127.0.0.1 - - [19/Oct/2025 17:03:14] "GET /logs HTTP/1.1" 200 -
+2025-10-19 17:03:15,164 [INFO] 127.0.0.1 - - [19/Oct/2025 17:03:15] "GET /logs HTTP/1.1" 200 -
+2025-10-19 17:03:16,160 [INFO] 127.0.0.1 - - [19/Oct/2025 17:03:16] "GET /logs HTTP/1.1" 200 -
+2025-10-19 17:03:16,423 [WARNING] Failed SQL connection to LOHITH\\SQLEXPRESS: ('08001', '[08001] [Microsoft][ODBC Driver 17 for SQL Server]SQL Server Network Interfaces: Error Locating Server/Instance Specified [xFFFFFFFF].  (-1) (SQLDriverConnect); [08001] [Microsoft][ODBC Driver 17 for SQL Server]Login timeout expired (0); [08001] [Microsoft][ODBC Driver 17 for SQL Server]A network-related or instance-specific error has occurred while establishing a connection to SQL Server. Server is not found or not accessible. Check if instance name is correct and if SQL Server is configured to allow remote connections. For more information see SQL Server Books Online. (-1)')
+2025-10-19 17:03:16,626 [INFO] Connected to default DB lohit on server 127.0.0.1,1433
+2025-10-19 17:03:16,627 [INFO] Fetching Ledger...
+2025-10-19 17:03:20,681 [ERROR] Tally request failed: HTTPConnectionPool(host='localhost', port=9000): Max retries exceeded with url: / (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x000002257AE8ABA0>: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it'))
+2025-10-19 17:03:20,682 [ERROR] Parse error: no element found: line 1, column 0
+2025-10-19 17:03:24,742 [ERROR] Tally request failed: HTTPConnectionPool(host='localhost', port=9000): Max retries exceeded with url: / (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x000002257AF2DD10>: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it'))
+2025-10-19 17:03:24,743 [ERROR] Parse error: no element found: line 1, column 0
+2025-10-19 17:03:24,743 [INFO] Ledger: Edu mode (NAME only)
+2025-10-19 17:03:24,744 [INFO] Ledger: Parsed 0 rows
+2025-10-19 17:03:24,744 [WARNING] Empty DataFrame for Ledger, skipping.
+2025-10-19 17:03:24,744 [INFO] Fetching Group...

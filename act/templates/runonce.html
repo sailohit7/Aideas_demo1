@@ -1,0 +1,251 @@
+{% extends "layout.html" %}
+{% block content %}
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+
+<style>
+  :root {
+    --bg1: #0a0f23;
+    --bg2: #16213e;
+    --accent: #00bcd4;
+    --accent2: #007bff;
+    --success: #10b981;
+    --muted: #94a3b8;
+  }
+
+  body {
+    background: radial-gradient(ellipse at top, var(--bg2), var(--bg1));
+    color: #f5f7f9;
+    font-family: "Inter", sans-serif;
+    overflow-x: hidden;
+  }
+
+  .page-hero {
+    text-align: left;
+    margin-bottom: 1rem;
+    animation: fadeDrop 600ms cubic-bezier(.2, .9, .3, 1);
+  }
+  @keyframes fadeDrop {
+    from { opacity: 0; transform: translateY(-12px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+
+  .panel {
+    background: rgba(255,255,255,0.04);
+    border-radius: 14px;
+    padding: 1.5rem;
+    box-shadow: 0 6px 22px rgba(0,0,0,0.45);
+    margin-bottom: 1.3rem;
+  }
+
+  select, input.form-control {
+    background-color: rgba(255,255,255,0.08);
+    border: 1px solid rgba(255,255,255,0.1);
+    color: #fff;
+  }
+
+  .btn-ghost {
+    background: rgba(255,255,255,0.08);
+    border: none;
+    color: var(--muted);
+    border-radius: 10px;
+    padding: .55rem .9rem;
+    transition: all 0.18s;
+  }
+  .btn-ghost:hover { background: rgba(255,255,255,0.14); color: #fff; }
+
+  /* Logs */
+  #runonceLogs {
+    background: #050505;
+    color: #78ff84;
+    font-family: monospace;
+    height: 360px;
+    overflow-y: auto;
+    border-radius: 10px;
+    padding: 1rem;
+    border: 1px solid rgba(255,255,255,0.05);
+  }
+
+  .log-line { opacity: 0; transform: translateY(4px); animation: fadeInUp 0.35s ease forwards; }
+  @keyframes fadeInUp { to { opacity: 1; transform: translateY(0);} }
+
+  /* Floating action buttons cluster (start + interactive) */
+  .fab-container {
+    position: fixed;
+    bottom: 28px;
+    right: 30px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    gap: 14px;
+    z-index: 1050;
+  }
+  .fab {
+    width: 56px;
+    height: 56px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-size: 1.4rem;
+    box-shadow: 0 6px 20px rgba(0,0,0,0.5);
+    cursor: pointer;
+    transition: all .2s ease;
+  }
+  .fab:hover { transform: scale(1.08); }
+  .fab-main { background: linear-gradient(135deg, var(--accent2), var(--accent)); }
+  .fab-muted { background: linear-gradient(135deg,#64748b,#475569); }
+
+  .status-text { color: var(--muted); margin-left: 12px; font-size: 0.95rem; }
+</style>
+
+<div class="container">
+  <div class="page-hero">
+    <h2 class="fw-bold">🚀 Run Once</h2>
+    <p class="text-muted small">Execute all master syncs at once for the selected database (runs every master automatically).</p>
+  </div>
+
+  <!-- Database Panel -->
+  <div class="panel">
+    <div class="row g-3 align-items-center">
+      <div class="col-md-4">
+        <select id="dbSelect" class="form-select" aria-label="Select database"></select>
+      </div>
+
+      <div class="col-auto">
+        <button class="btn-ghost" onclick="fetchDatabases()"><i class="bi bi-arrow-clockwise"></i> Refresh</button>
+      </div>
+
+      <div class="col-md-4 d-flex">
+        <input id="newDbName" class="form-control me-2" placeholder="New DB name">
+        <button class="btn-ghost" onclick="createDatabase()"><i class="bi bi-plus-lg text-success"></i> Create</button>
+      </div>
+
+      <div class="col-md-12 mt-3 d-flex align-items-center">
+        <button id="startRunBtn" class="btn btn-primary me-2" onclick="startRunOnce()">
+          <i class="bi bi-play-fill me-1"></i> Start Run
+        </button>
+
+        <button class="btn btn-outline-light me-2" onclick="window.location='/interactive'">
+          <i class="bi bi-gear me-1"></i> Interactive
+        </button>
+
+        <!-- Select Masters removed from action row (Run Once runs all masters) -->
+
+        <div class="status-text" id="runOnceStatus">Idle</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Logs Panel -->
+  <div class="panel">
+    <div class="d-flex justify-content-between align-items-center mb-2">
+      <h5 class="mb-0">📜 Live Logs</h5>
+      <div>
+        <button class="btn-ghost btn-sm me-2" onclick="clearRunLogs()">🧹 Clear</button>
+        <span class="text-muted small">Auto updates</span>
+      </div>
+    </div>
+    <div id="runonceLogs"></div>
+  </div>
+</div>
+
+<!-- Floating FABs: Start + Interactive (no Select Masters) -->
+<div class="fab-container">
+  <div class="fab fab-main" title="Start Run" onclick="startRunOnce()" id="runFab">
+    <i class="bi bi-play-fill"></i>
+  </div>
+  <div class="fab fab-muted" title="Interactive" onclick="window.location='/interactive'">
+    <i class="bi bi-gear"></i>
+  </div>
+</div>
+
+<script>
+/* fetch databases */
+async function fetchDatabases() {
+  try {
+    const res = await fetch('/get_databases');
+    const data = await res.json();
+    const sel = document.getElementById('dbSelect');
+    sel.innerHTML = '';
+    if (data.databases && data.databases.length) {
+      data.databases.forEach(db => {
+        const opt = document.createElement('option');
+        opt.value = db;
+        opt.textContent = db;
+        sel.appendChild(opt);
+      });
+    } else {
+      sel.innerHTML = '<option>No databases found</option>';
+    }
+  } catch (e) { console.error(e); }
+}
+fetchDatabases();
+
+/* create db */
+async function createDatabase() {
+  const name = document.getElementById('newDbName').value.trim();
+  if (!name) return alert('Enter a database name');
+  const res = await fetch('/create_database', {
+    method: 'POST',
+    headers: {'Content-Type':'application/json'},
+    body: JSON.stringify({ name })
+  });
+  const data = await res.json();
+  alert(data.message || data.error);
+  fetchDatabases();
+}
+
+/* start run once (runs ALL masters) */
+async function startRunOnce(){
+  const btn = document.getElementById('startRunBtn');
+  const fab = document.getElementById('runFab');
+  const db = document.getElementById('dbSelect').value;
+  if (!db) return alert('Select a database first.');
+  btn.disabled = true;
+  btn.innerHTML = '<span class="spinner-border spinner-border-sm"></span> Starting...';
+  document.getElementById('runOnceStatus').textContent = 'Starting...';
+  fab.innerHTML = '<span style="width:12px;height:12px;border-radius:50%;background:#fff;display:inline-block;animation:dotPulse 1.2s infinite"></span>';
+
+  try {
+    // this endpoint triggers the full (all masters) run on the backend
+    await fetch(`/run/runonce?db=${encodeURIComponent(db)}`);
+    addRunLog(`▶ RunOnce started for ${db} (all masters)`);
+  } catch (e) {
+    addRunLog('⚠ Failed to start RunOnce');
+    console.error(e);
+  }
+
+  setTimeout(() => {
+    btn.disabled = false;
+    btn.innerHTML = '<i class="bi bi-play-fill me-1"></i> Start Run';
+    document.getElementById('runOnceStatus').textContent = 'Idle';
+    fab.innerHTML = '<i class="bi bi-play-fill"></i>';
+  }, 2500);
+}
+
+/* logs */
+async function fetchRunLogs(){
+  try {
+    const res = await fetch('/get_logs');
+    const data = await res.json();
+    const el = document.getElementById('runonceLogs');
+    el.innerHTML = data.logs.map(l=>`<div class="log-line">${l}</div>`).join('');
+    el.scrollTop = el.scrollHeight;
+  } catch(e){ console.error(e); }
+}
+
+function addRunLog(msg){
+  const el = document.getElementById('runonceLogs');
+  const d = document.createElement('div');
+  d.className = 'log-line';
+  d.textContent = `[${new Date().toLocaleTimeString()}] ${msg}`;
+  el.appendChild(d);
+  el.scrollTop = el.scrollHeight;
+}
+
+function clearRunLogs(){ document.getElementById('runonceLogs').innerHTML = ''; }
+
+setInterval(fetchRunLogs, 2000);
+</script>
+{% endblock %}

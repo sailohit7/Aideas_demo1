@@ -18,14 +18,17 @@ from apscheduler.schedulers.blocking import BlockingScheduler
 from datetime import datetime
 
 # ---------------- CONFIG ----------------
+# TallyPrime server URL and request headers
 TALLY_URL = "http://localhost:9000"
 HEADERS = {"Content-Type": "text/xml"}
 
-SQL_SERVERS_TO_TRY = [r"LOHITH\\SQLEXPRESS", "127.0.0.1,1433"]
-ODBC_DRIVER = "{ODBC Driver 17 for SQL Server}"
-DEFAULT_DB = "lohit"
-UPSERT_BATCH_SIZE = 200
+# SQL connection settings
+SQL_SERVERS_TO_TRY = [r"LOHITH\\SQLEXPRESS", "127.0.0.1,1433"]  # possible SQL servers to try
+ODBC_DRIVER = "{ODBC Driver 17 for SQL Server}"                 # ODBC driver
+DEFAULT_DB = "lohit"                                            # default database name
+UPSERT_BATCH_SIZE = 200                                         # batch size for inserts/updates
 
+# Logging configuration (both file + console output)
 logging.basicConfig(
     level=logging.INFO,
     format="%(asctime)s [%(levelname)s] %(message)s",
@@ -34,8 +37,15 @@ logging.basicConfig(
 
 # ---------------- SQL UTILS ----------------
 def connect_sql_interactive():
+    """
+    Connect to SQL Server interactively.
+    - Tries multiple server options until one connects.
+    - Lists available databases and lets user choose or create a new one.
+    - Returns a connection object.
+    """
     for server in SQL_SERVERS_TO_TRY:
         try:
+            # First connect to 'master' to list databases
             conn = pyodbc.connect(
                 f"DRIVER={ODBC_DRIVER};SERVER={server};DATABASE=master;Trusted_Connection=yes;",
                 timeout=5
@@ -44,9 +54,13 @@ def connect_sql_interactive():
             cursor = conn.cursor()
             cursor.execute("SELECT name FROM sys.databases")
             dbs = [r[0] for r in cursor.fetchall()]
+
+            # Show DB list to user
             print("\nDatabases on server:")
             for i, db in enumerate(dbs, 1):
                 print(f"  {i}. {db}")
+
+            # Ask for choice or create new DB
             choice = input(f"Choose DB number or type a new database name [default: {DEFAULT_DB}]: ").strip()
             if not choice:
                 db_name = DEFAULT_DB
@@ -58,6 +72,7 @@ def connect_sql_interactive():
                 conn.commit()
                 logging.info(f"Created new database: {db_name}")
 
+            # Reconnect directly to chosen DB
             conn.close()
             conn = pyodbc.connect(
                 f"DRIVER={ODBC_DRIVER};SERVER={server};DATABASE={db_name};Trusted_Connection=yes;",
@@ -70,6 +85,10 @@ def connect_sql_interactive():
     raise Exception("All SQL Server connection attempts failed.")
 
 def connect_sql_default():
+    """
+    Connect directly to the default SQL database.
+    Used for non-interactive modes.
+    """
     for server in SQL_SERVERS_TO_TRY:
         try:
             conn = pyodbc.connect(
@@ -84,17 +103,28 @@ def connect_sql_default():
 
 # ---------------- HASH UTILS ----------------
 def compute_row_hash(row: pd.Series) -> str:
-    """Return a stable hash for a row (excluding metadata)."""
+    """
+    Compute a stable SHA1 hash for a row.
+    - Excludes metadata columns (those starting with '_').
+    - Used for change detection to avoid unnecessary updates.
+    """
     content = "|".join(str(v) if v is not None else "" for k, v in row.items() if not k.startswith("_"))
     return hashlib.sha1(content.encode("utf-8")).hexdigest()
 
 # ---------------- UPSERT ----------------
 def upsert_dataframe(df: pd.DataFrame, table: str, conn):
+    """
+    UPSERT (insert/update) a pandas DataFrame into SQL Server.
+    - Creates table if not exists.
+    - Adds missing columns dynamically.
+    - Uses NAME as primary key (unique index).
+    - Compares hashes to only update changed rows.
+    """
     if df.empty:
         logging.warning(f"Empty DataFrame for {table}, skipping.")
         return
 
-    # Add hash + meta columns
+    # Add hash + metadata columns
     df["_HASH"] = df.apply(compute_row_hash, axis=1)
     df["_SYNCED_AT"] = datetime.now().strftime("%Y-%m-%d %H:%M:%S")
     if "_ALTERID" not in df.columns: df["_ALTERID"] = None
@@ -104,12 +134,12 @@ def upsert_dataframe(df: pd.DataFrame, table: str, conn):
     cursor = conn.cursor()
     safe_table = f"[{table}]"
 
-    # Create table if not exists
+    # Create table if it doesn’t exist
     columns = ", ".join([f"[{col}] NVARCHAR(MAX)" for col in df.columns])
     cursor.execute(f"IF OBJECT_ID(N'{table}', 'U') IS NULL CREATE TABLE {safe_table} ({columns})")
     conn.commit()
 
-    # Ensure schema has all columns
+    # Add missing columns if schema changed
     cursor.execute(f"SELECT COLUMN_NAME FROM INFORMATION_SCHEMA.COLUMNS WHERE TABLE_NAME = ?", table)
     existing_cols = {r[0] for r in cursor.fetchall()}
     missing_cols = [c for c in df.columns if c not in existing_cols]
@@ -118,7 +148,7 @@ def upsert_dataframe(df: pd.DataFrame, table: str, conn):
         logging.info(f"Altering {table}: added new column [{col}]")
     conn.commit()
 
-    # Ensure indexes
+    # Create indexes for performance
     try:
         cursor.execute(f"""
             IF NOT EXISTS (SELECT 1 FROM sys.indexes WHERE name = 'IX_{table}_NAME')
@@ -133,7 +163,7 @@ def upsert_dataframe(df: pd.DataFrame, table: str, conn):
     except Exception as e:
         logging.warning(f"Could not create indexes on {table}: {e}")
 
-    # Insert/update only if changed
+    # Upsert rows one by one
     for _, row in df.iterrows():
         cursor.execute(f"SELECT _HASH FROM {safe_table} WHERE [NAME] = ?", row["NAME"])
         existing = cursor.fetchone()
@@ -148,7 +178,7 @@ def upsert_dataframe(df: pd.DataFrame, table: str, conn):
             )
         else:
             if existing[0] != row["_HASH"]:
-                # Update only if hash changed, force new _SYNCED_AT
+                # Update row if data changed
                 assignments = ", ".join([f"[{col}] = ?" for col in df.columns if col != "_SYNCED_AT"])
                 cursor.execute(
                     f"UPDATE {safe_table} SET {assignments}, [_SYNCED_AT] = ? WHERE [NAME] = ?",
@@ -162,6 +192,9 @@ def upsert_dataframe(df: pd.DataFrame, table: str, conn):
 
 # ---------------- TALLY UTILS ----------------
 def send_request(xml: str) -> str:
+    """
+    Send XML request to Tally server and return raw response text.
+    """
     try:
         resp = requests.post(TALLY_URL, data=xml.encode("utf-8"), headers=HEADERS)
         return resp.text
@@ -170,9 +203,14 @@ def send_request(xml: str) -> str:
         return ""
 
 def parse_xml_to_df(xml: str, tags: list) -> pd.DataFrame:
+    """
+    Parse Tally XML response into a pandas DataFrame.
+    - Extracts only requested tags.
+    - Cleans illegal characters.
+    """
     try:
-        xml = re.sub(r"[\x00-\x08\x0B-\x0C\x0E-\x1F]", "", xml)
-        xml = re.sub(r"&(?!(amp;|lt;|gt;|apos;|quot;))", "&amp;", xml)
+        xml = re.sub(r"[\x00-\x08\x0B-\x0C\x0E-\x1F]", "", xml)  # remove control chars
+        xml = re.sub(r"&(?!(amp;|lt;|gt;|apos;|quot;))", "&amp;", xml)  # fix bad ampersands
         root = ET.fromstring(xml)
         rows = []
         for obj in root.iter("COLLECTION"):
@@ -188,9 +226,15 @@ def parse_xml_to_df(xml: str, tags: list) -> pd.DataFrame:
         return pd.DataFrame(columns=tags)
 
 def fetch_master(master: str, full_fields: list):
-    # Always include Tally IDs
+    """
+    Fetch a master from Tally.
+    - First tries Licensed mode (full fields).
+    - Falls back to Edu mode (NAME + IDs only).
+    Returns a DataFrame.
+    """
     tally_fields = full_fields + ["_ALTERID", "_GUID", "_MASTERID"]
 
+    # Licensed/full mode request
     xml_full = f"""
     <ENVELOPE>
       <HEADER>
@@ -221,7 +265,7 @@ def fetch_master(master: str, full_fields: list):
         logging.info(f"{master}: Licensed mode (full fields)")
         return df
 
-    # Fallback: Edu version
+    # Edu fallback request
     xml_edu = f"""
     <ENVELOPE>
       <HEADER>
@@ -252,6 +296,7 @@ def fetch_master(master: str, full_fields: list):
     return df
 
 # ---------------- MASTERS ----------------
+# Dictionary of all Tally masters with their fields
 MASTERS = {
     "Ledger": ["NAME", "PARENT", "OPENINGBALANCE"],
     "Group": ["NAME", "PARENT", "ISSUBLEDGER"],
@@ -281,6 +326,12 @@ MASTERS = {
 
 # ---------------- RUN MODES ----------------
 def run_interactive():
+    """
+    Interactive mode:
+    - Lets user pick DB.
+    - Lets user pick specific masters (or all).
+    - Fetch + sync each master.
+    """
     conn = connect_sql_interactive()
     print("\nAvailable masters:")
     for i, master in enumerate(MASTERS.keys(), 1):
@@ -303,6 +354,11 @@ def run_interactive():
     logging.info("Interactive sync complete.")
 
 def run_once_all():
+    """
+    One-time mode:
+    - Connects to default DB.
+    - Fetches all masters and syncs them.
+    """
     conn = connect_sql_default()
     for master, fields in MASTERS.items():
         logging.info(f"Fetching {master}...")
@@ -313,6 +369,12 @@ def run_once_all():
     logging.info("One-time sync (all masters) complete.")
 
 def run_scheduler():
+    """
+    Scheduler mode:
+    - Option 1: Run immediately.
+    - Option 2: Run every N seconds (interval).
+    - Option 3: Run daily at given time.
+    """
     scheduler = BlockingScheduler()
     print("\nScheduler options:")
     print("  1. Run now")
@@ -334,6 +396,10 @@ def run_scheduler():
 
 # ---------------- MAIN ----------------
 def main():
+    """
+    Main entry point.
+    Lets user choose mode: [1] Interactive, [2] Run once, [3] Scheduler.
+    """
     print("Tally -> SQL Sync (all masters).")
     print("Modes: [1] Interactive run  [2] Run once (all masters)  [3] Scheduler")
     mode = input("Choose mode [1]: ").strip() or "1"

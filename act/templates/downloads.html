@@ -1,0 +1,131 @@
+{% extends "layout.html" %}
+{% block content %}
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+
+<style>
+  .panel { background: rgba(255,255,255,0.03); padding:1.4rem; border-radius:12px; margin-bottom:1.25rem; box-shadow: 0 8px 22px rgba(0,0,0,0.45); }
+  #downloadLog { background:#050505; color:#7CFFB2; font-family:monospace; padding:1rem; border-radius:8px; height:260px; overflow:auto; }
+  .btn-download{ background: linear-gradient(135deg,#00bcd4,#007bff); color:#fff; border:none; padding:10px 18px; border-radius:8px; }
+  .history-row{ display:flex; align-items:center; gap:12px; padding:8px 0; border-bottom:1px solid rgba(255,255,255,0.03); }
+  .status-pill { padding:6px 10px; border-radius:999px; font-weight:600; font-size:0.85rem;}
+  .st-success{ background: rgba(16,185,129,0.12); color:#10B981;}
+  .st-failed { background: rgba(239,68,68,0.08); color:#ef4444;}
+  .st-started { background: rgba(59,130,246,0.08); color:#3b82f6;}
+</style>
+
+<div class="container">
+  <div class="page-hero">
+    <h2 class="fw-bold">📥 Downloads</h2>
+    <p class="muted">Download now or review previously exported/downloaded runs.</p>
+  </div>
+
+  <div class="panel row g-3 align-items-end">
+    <div class="col-md-4">
+      <label class="form-label text-muted">Select Database</label>
+      <select id="dlDbSelect" class="form-select"></select>
+    </div>
+
+    <div class="col-md-5">
+      <label class="form-label text-muted">Note (optional)</label>
+      <input id="dlNote" class="form-control" placeholder="e.g. Export for accounting team">
+    </div>
+
+    <div class="col-auto">
+      <button id="dlNowBtn" class="btn-download btn-lg" onclick="downloadNow()"><i class="bi bi-download me-2"></i> Download Now</button>
+    </div>
+  </div>
+
+  <div class="panel">
+    <div class="d-flex justify-content-between align-items-center mb-2">
+      <h5 class="mb-0">🔁 Downloaded History</h5>
+      <div>
+        <button class="btn btn-sm btn-outline-light" onclick="fetchHistory()">Refresh</button>
+      </div>
+    </div>
+
+    <div id="historyList" style="min-height:80px;">
+      <!-- filled by JS -->
+    </div>
+  </div>
+
+  <div class="panel">
+    <h5 class="mb-2">📜 Live Log</h5>
+    <div id="downloadLog"></div>
+  </div>
+</div>
+
+<script>
+async function fetchDatabasesForDownloads(){
+  try{
+    const res = await fetch('/get_databases');
+    const data = await res.json();
+    const sel = document.getElementById('dlDbSelect');
+    sel.innerHTML = '';
+    if(data.databases && data.databases.length){
+      data.databases.forEach(d=> {
+        const opt = document.createElement('option');
+        opt.value = d; opt.textContent = d;
+        sel.appendChild(opt);
+      });
+    } else {
+      sel.innerHTML = '<option disabled>No DBs</option>';
+    }
+  }catch(e){
+    console.error(e);
+  }
+}
+fetchDatabasesForDownloads();
+
+async function fetchHistory(){
+  try{
+    const res = await fetch('/get_download_history');
+    const data = await res.json();
+    const list = document.getElementById('historyList');
+    if(!data.history || !data.history.length){
+      list.innerHTML = '<div class="muted">No downloads yet.</div>';
+      return;
+    }
+    list.innerHTML = data.history.map(h => {
+      const pill = h.status === 'success' ? 'st-success' : (h.status === 'failed' ? 'st-failed' : 'st-started');
+      return `<div class="history-row">
+        <div style="flex:1">
+          <div><strong>${h.ts}</strong> <span class="muted">(${h.db || 'Default'})</span></div>
+          <div class="muted small">${h.notes || ''}</div>
+        </div>
+        <div><span class="status-pill ${pill}">${h.status}</span></div>
+      </div>`;
+    }).join('');
+  }catch(e){ console.error(e) }
+}
+fetchHistory();
+
+function addDownloadLog(msg){
+  const el = document.getElementById('downloadLog');
+  el.innerHTML += `<div>[${new Date().toLocaleString()}] ${msg}</div>`;
+  el.scrollTop = el.scrollHeight;
+}
+
+async function downloadNow(){
+  const btn = document.getElementById('dlNowBtn');
+  btn.disabled = true;
+  const db = document.getElementById('dlDbSelect').value;
+  const note = document.getElementById('dlNote').value || '';
+  addDownloadLog('▶ Starting download...');
+  try{
+    const res = await fetch('/download_now', {
+      method:'POST',
+      headers: {'Content-Type':'application/json'},
+      body: JSON.stringify({ db, note })
+    });
+    const data = await res.json();
+    addDownloadLog('🟢 Download started: ' + (data.ts || 'started'));
+    // refresh history after a short delay so started/finished items appear
+    setTimeout(fetchHistory, 2000);
+  }catch(e){
+    addDownloadLog('⚠ Download failed to start: ' + e);
+  } finally {
+    btn.disabled = false;
+  }
+}
+</script>
+{% endblock %}

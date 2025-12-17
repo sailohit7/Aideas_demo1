@@ -294,3 +294,22 @@ def main():
 
 if __name__ == "__main__":
     main()
+ 
+
+def run_selected(selected_masters):
+    conn = connect_sql_default()
+    for master in selected_masters:
+        fields = MASTERS.get(master, ["NAME"])
+        logging.info(f"Fetching {master}...")
+        df = fetch_master(master, fields)
+        logging.info(f"{master}: Parsed {len(df)} rows")
+        upsert_dataframe(df, master, conn)
+    conn.close()
+    logging.info("Selected masters sync complete.")
+def run_interactive(db_name=None):
+    print(f"Running interactive sync on database: {db_name}")
+    # your existing logic...
+def run_once_all(db_name=None):
+    print(f"Running full one-time sync on database: {db_name}")
+    # your actual sync logic...
+

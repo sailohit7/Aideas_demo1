@@ -1,0 +1,86 @@
+{% extends "layout.html" %}
+{% block content %}
+<div class="page-hero mb-4">
+  <h2 class="fw-bold text-center" style="color:var(--text-yellow)">🔌 Connections</h2>
+  <p class="muted text-center">Check connectivity to Tally Prime and Microsoft SQL Server.</p>
+</div>
+
+<div class="container">
+  <div class="panel" style="padding:1.6rem; margin-bottom:1.4rem;">
+    <h4 style="color:var(--text-yellow)">Quick checks</h4>
+    <p class="muted small">Click a check to validate connectivity. Results show below.</p>
+
+    <div class="d-flex gap-2" style="margin-top:1rem;">
+      <button id="btn-sql" class="btn btn-outline" onclick="checkSQL()">Check SQL Server</button>
+      <button id="btn-tally" class="btn btn-outline" onclick="checkTally()">Check Tally</button>
+    </div>
+
+    <div id="results" style="margin-top:1rem;">
+      <!-- dynamic results -->
+    </div>
+  </div>
+
+  <div class="panel" style="padding:1.6rem;">
+    <h5 style="color:var(--text-yellow)">Details</h5>
+    <p class="muted small">SQL uses <code>main_sync.connect_sql_default()</code>. Tally uses <code>TALLY_URL</code> env or <code>main_sync.check_tally_connection</code> if present.</p>
+  </div>
+</div>
+
+<script>
+function renderResult(el, ok, msg){
+  const color = ok ? '#18b76a' : '#ff5b5b';
+  const icon = ok ? '✅' : '❌';
+  el.innerHTML = `
+    <div style="border-radius:8px; padding:12px; background:rgba(255,255,255,0.02); display:flex; gap:12px; align-items:center;">
+      <div style="font-size:20px">${icon}</div>
+      <div>
+        <div style="font-weight:600; color:${color}">${ok ? 'OK' : 'Failed'}</div>
+        <div style="font-size:13px; color:var(--muted)">${msg}</div>
+      </div>
+    </div>
+  `;
+}
+
+async function checkSQL(){
+  const btn = document.getElementById('btn-sql');
+  const r = document.getElementById('results');
+  btn.disabled = true;
+  btn.innerText = 'Checking...';
+  try {
+    const resp = await fetch('/api/check_sql');
+    const json = await resp.json();
+    const el = document.createElement('div');
+    renderResult(el, !!json.ok, json.msg || JSON.stringify(json));
+    r.prepend(el);
+  } catch (e) {
+    const el = document.createElement('div');
+    renderResult(el, false, e.toString());
+    r.prepend(el);
+  } finally {
+    btn.disabled = false;
+    btn.innerText = 'Check SQL Server';
+  }
+}
+
+async function checkTally(){
+  const btn = document.getElementById('btn-tally');
+  const r = document.getElementById('results');
+  btn.disabled = true;
+  btn.innerText = 'Checking...';
+  try {
+    const resp = await fetch('/api/check_tally');
+    const json = await resp.json();
+    const el = document.createElement('div');
+    renderResult(el, !!json.ok, json.msg || JSON.stringify(json));
+    r.prepend(el);
+  } catch (e) {
+    const el = document.createElement('div');
+    renderResult(el, false, e.toString());
+    r.prepend(el);
+  } finally {
+    btn.disabled = false;
+    btn.innerText = 'Check Tally';
+  }
+}
+</script>
+{% endblock %}

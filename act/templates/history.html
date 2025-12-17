@@ -1,0 +1,24 @@
+{% extends "layout.html" %}
+{% block content %}
+<h2 class="fw-bold mb-4 animate__animated animate__fadeInDown">📜 Sync History</h2>
+
+<div class="card shadow-lg border-0 p-4 animate__animated animate__fadeInUp">
+  <p>List of all completed sync runs with timestamps.</p>
+  <table class="table table-dark table-striped table-hover">
+    <thead>
+      <tr><th>#</th><th>Mode</th><th>Database</th><th>Date & Time</th></tr>
+    </thead>
+    <tbody id="historyTable"></tbody>
+  </table>
+</div>
+
+<script>
+async function loadHistory(){
+  const res=await fetch('/get_logs');
+  const data=await res.json();
+  const table=document.getElementById('historyTable');
+  table.innerHTML=data.logs.map((l,i)=>`<tr><td>${i+1}</td><td>Sync</td><td>Default</td><td>${new Date().toLocaleString()}</td></tr>`).join('');
+}
+loadHistory();
+</script>
+{% endblock %}

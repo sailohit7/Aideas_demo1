@@ -1,0 +1,253 @@
+{% extends "layout.html" %}
+{% block content %}
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet">
+
+<div class="page-hero">
+  <h1 class="page-title">⏱ Scheduler — Tally → SQL Sync</h1>
+  <p class="page-sub">Automate your syncs — create multiple jobs (interval, daily, monthly, yearly).</p>
+</div>
+
+<section class="card-grid">
+  <article class="card create-job-card">
+    <h2 class="card-title">Create Job</h2>
+
+    <div class="form-row">
+      <label class="label">Job name</label>
+      <input id="job-name" placeholder="Friendly job name (eg. Daily)" />
+    </div>
+
+    <div class="form-row">
+      <label class="label">Database</label>
+      <select id="job-db">
+        <option value="">(Default connection)</option>
+        {% for db in databases %}
+        <option value="{{ db|e }}">{{ db|e }}</option>
+        {% endfor %}
+      </select>
+      <button id="refresh-dbs" class="btn small ghost">⟳ Refresh</button>
+    </div>
+
+    <div class="form-row">
+      <label class="label">Schedule Type</label>
+      <div class="radio-group">
+        <label><input type="radio" name="sched-type" value="interval" checked> Interval (minutes)</label>
+        <label><input type="radio" name="sched-type" value="daily"> Daily at</label>
+        <label><input type="radio" name="sched-type" value="monthly"> Monthly on day</label>
+        <label><input type="radio" name="sched-type" value="yearly"> Yearly on</label>
+      </div>
+    </div>
+
+    <div class="form-row schedule-inputs">
+      <input id="job-interval" class="small-input" placeholder="15" />
+      <input id="job-time" class="small-input" placeholder="HH:MM" />
+      <input id="job-day" class="small-input" placeholder="day" />
+      <input id="job-date" class="small-input" placeholder="YYYY-MM-DD" />
+    </div>
+
+    <div class="form-row">
+      <label class="checkbox-inline"><input type="checkbox" id="job-enabled" checked> Start when created</label>
+      <button id="create-job" class="btn primary">Create Job</button>
+    </div>
+
+    <p class="hint">Notes: interval runs every N minutes. Daily runs at HH:MM. Monthly choose day (1–28 recommended). Yearly pick a date (month+day used).</p>
+  </article>
+
+  <article class="card jobs-list-card">
+    <h2 class="card-title">Jobs</h2>
+    <div id="jobs-list" class="jobs-list">
+      <div class="muted">No jobs yet. Create one above.</div>
+    </div>
+  </article>
+</section>
+
+<section class="card logs-card">
+  <h2 class="card-title">Live Logs</h2>
+  <div id="live-logs" class="log-window"></div>
+</section>
+
+<script>
+  // --- small helper ---
+  function qs(sel, root=document) { return root.querySelector(sel); }
+  function qsa(sel, root=document) { return Array.from(root.querySelectorAll(sel)); }
+
+  async function fetchJobs() {
+    const res = await fetch('/get_jobs');
+    const j = await res.json();
+    return j.jobs || [];
+  }
+
+  function renderJobs(jobs) {
+    const container = qs('#jobs-list');
+    container.innerHTML = '';
+    if (!jobs.length) { container.innerHTML = '<div class="muted">No jobs yet. Create one above.</div>'; return; }
+    jobs.forEach(job => {
+      const el = document.createElement('div');
+      el.className = 'job-card';
+      el.innerHTML = `
+        <div class="job-head">
+          <div><strong>${escapeHTML(job.name)}</strong> <span class="muted">[${job.type}]</span></div>
+          <div class="job-actions">
+            <button class="btn mini run" data-id="${job.id}">▶ Run</button>
+            <button class="btn mini toggle" data-id="${job.id}">${job.enabled? '⏸' : '▶'}</button>
+            <button class="btn mini danger delete" data-id="${job.id}">🗑</button>
+          </div>
+        </div>
+        <div class="job-body">
+          <div><span class="muted">DB:</span> ${escapeHTML(job.db||'(default)')}</div>
+          <div><span class="muted">Next run:</span> ${job.next_run? new Date(job.next_run).toLocaleString() : '—'}</div>
+        </div>
+      `;
+      container.appendChild(el);
+    });
+    // attach handlers
+    qsa('.job-card .run').forEach(b => b.onclick = async (ev) => {
+      const id = ev.target.dataset.id;
+      await fetch('/run_job', {method:'POST', headers:{'content-type':'application/json'}, body: JSON.stringify({id})});
+      appendLog(`Manual run started for job ${id}`);
+    });
+    qsa('.job-card .delete').forEach(b => b.onclick = async (ev) => {
+      if (!confirm('Delete job?')) return;
+      const id = ev.target.dataset.id;
+      await fetch('/delete_job', {method:'POST', headers:{'content-type':'application/json'}, body: JSON.stringify({id})});
+      appendLog(`Deleted job ${id}`);
+      reloadJobs();
+    });
+    qsa('.job-card .toggle').forEach(b => b.onclick = async (ev) => {
+      const id = ev.target.dataset.id;
+      await fetch('/toggle_job', {method:'POST', headers:{'content-type':'application/json'}, body: JSON.stringify({id})});
+      appendLog(`Toggled job ${id}`);
+      reloadJobs();
+    });
+  }
+
+  function escapeHTML(s) {
+    if (!s && s !== 0) return '';
+    return String(s).replace(/[&<>"']/g, m => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":"&#39;"}[m]));
+  }
+
+  async function reloadJobs(){
+    const jobs = await fetchJobs();
+    renderJobs(jobs);
+  }
+
+  // create job
+  qs('#create-job').onclick = async () => {
+    const payload = {
+      name: qs('#job-name').value || 'Job ' + Date.now(),
+      db: qs('#job-db').value || null,
+      type: (qs('input[name="sched-type"]:checked') || {value:'interval'}).value,
+      interval: parseInt(qs('#job-interval').value || '15'),
+      time: qs('#job-time').value || null,
+      day: qs('#job-day').value || null,
+      date: qs('#job-date').value || null,
+      enabled: !!qs('#job-enabled').checked
+    };
+    const res = await fetch('/create_job', {method:'POST', headers:{'content-type':'application/json'}, body: JSON.stringify(payload)});
+    const data = await res.json();
+    appendLog(`Created job ${data.job.name}`);
+    reloadJobs();
+  };
+
+  qs('#refresh-dbs').onclick = async () => {
+    // fetch fresh dbs list
+    const res = await fetch('/get_databases');
+    const data = await res.json();
+    const sel = qs('#job-db');
+    sel.innerHTML = '<option value="">(Default connection)</option>';
+    (data.databases || []).forEach(d => {
+      const opt = document.createElement('option'); opt.value = d; opt.textContent = d;
+      sel.appendChild(opt);
+    });
+    appendLog('Databases refreshed');
+  };
+
+  // logs
+  function appendLog(msg) {
+    const win = qs('#live-logs');
+    const line = document.createElement('div');
+    line.className = 'log-line';
+    line.textContent = `[${new Date().toLocaleTimeString()}] ${msg}`;
+    win.appendChild(line);
+    win.scrollTop = win.scrollHeight;
+  }
+
+  async function pollLogs(){
+    try {
+      const res = await fetch('/get_logs');
+      const j = await res.json();
+      // show only latest 10
+      const lines = j.logs.slice(-50);
+      const win = qs('#live-logs');
+      win.innerHTML = '';
+      lines.forEach(l => {
+        const div = document.createElement('div'); div.className='log-line'; div.textContent = l;
+        win.appendChild(div);
+      });
+    } catch(e){}
+  }
+
+  // initial load
+  reloadJobs();
+  setInterval(reloadJobs, 5000);
+  pollLogs();
+  setInterval(pollLogs, 3000);
+
+</script>
+
+<style>
+  /* Local scheduler page styles + animations, append to your style.css if needed */
+  :root {
+    --bg: #071225;
+    --card: rgba(255,255,255,0.03);
+    --accent: #ffd400;
+    --muted: rgba(255,255,255,0.45);
+    --yellow: #ffd400;
+  }
+  .page-hero { text-align:center; margin:30px 0 10px; }
+  .page-title { font-size:36px; color:var(--yellow); margin:0; font-weight:800; text-shadow:0 4px 18px rgba(0,0,0,0.6); }
+  .page-sub { color:var(--muted); margin:8px 0 30px; }
+
+  .card-grid { display:grid; grid-template-columns: 1fr 520px; gap:28px; padding:0 36px; }
+  .card { background: linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01)); border-radius:14px; padding:22px; box-shadow: 0 10px 30px rgba(0,0,0,0.6); color:#fff; }
+  .create-job-card { animation: slideIn 420ms ease both; }
+  .jobs-list-card { min-height:220px; }
+
+  .card-title { color: var(--yellow); font-size:22px; margin:0 0 12px; }
+
+  .form-row { display:flex; gap:12px; align-items:center; margin-bottom:14px; flex-wrap:wrap; }
+  .label { width:130px; color:#fff; font-weight:600; }
+  input, select { padding:10px 12px; border-radius:8px; border:1px solid rgba(255,255,255,0.08); background: rgba(255,255,255,0.02); color: #fff; min-width:220px; font-size:14px; }
+  .small-input { width: 120px; }
+
+  .radio-group label { margin-right:12px; color:#fff; font-weight:500; }
+  .radio-group input[type="radio"] { accent-color: var(--yellow); width:16px; height:16px; margin-right:6px; vertical-align:middle; }
+
+  .checkbox-inline input[type="checkbox"] { accent-color: var(--yellow); width:16px; height:16px; margin-right:6px; vertical-align:middle; }
+  .hint { color: var(--muted); font-size:12px; margin-top:8px; }
+
+  .btn { border-radius:8px; padding:8px 12px; background: transparent; border:1px solid rgba(255,255,255,0.06); color:#fff; cursor:pointer; }
+  .btn.primary { background:var(--yellow); color:#081219; border:none; box-shadow:0 6px 16px rgba(255,212,0,0.12); }
+  .btn.small { padding:6px 10px; }
+  .btn.ghost { background:transparent; border:1px solid rgba(255,255,255,0.06); }
+  .btn.mini { padding:6px 8px; border-radius:6px; margin-left:6px; font-size:13px; }
+  .btn.danger { background:#c73c3c; color:#fff; border:none; }
+
+  .jobs-list { display:flex; flex-direction:column; gap:12px; }
+  .job-card { background: rgba(0,0,0,0.45); border-radius:10px; padding:12px; box-shadow: inset 0 -1px 0 rgba(255,255,255,0.02); animation: fadeUp 350ms both; }
+  .job-head { display:flex; justify-content:space-between; align-items:center; gap:12px; }
+  .job-actions button { margin-left:6px; }
+  .job-body { color:var(--muted); font-size:13px; margin-top:8px; }
+
+  .log-window { background:#000; border-radius:10px; padding:12px; min-height:180px; color:#0f0; overflow:auto; box-shadow: inset 0 0 0 4px rgba(255,255,255,0.01); }
+  .log-line { font-family: monospace; font-size:12px; margin-bottom:6px; color:#7cff7c; }
+
+  /* animations */
+  @keyframes slideIn { from { transform: translateY(12px); opacity:0 } to { transform: translateY(0); opacity:1 } }
+  @keyframes fadeUp { from { transform: translateY(6px); opacity:0 } to { transform: translateY(0); opacity:1 } }
+
+  /* responsive */
+  @media (max-width:1100px) {
+    .card-grid { grid-template-columns: 1fr; padding:0 16px; }
+  }
+</style>
+{% endblock %}

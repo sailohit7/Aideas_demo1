@@ -1,0 +1,15 @@
+{% extends "layout.html" %}
+{% block content %}
+<h2>🧭 Tally → SQL Server Sync</h2>
+
+<div class="buttons">
+  <button onclick="runMode('interactive')">▶ Interactive</button>
+  <button onclick="runMode('runonce')">⟳ Run Once (All Masters)</button>
+  <button onclick="runMode('scheduler')">⏱ Scheduler</button>
+</div>
+
+<div id="status">Status: <span id="statusText">Idle</span></div>
+<div id="logbox"></div>
+
+<script src="/static/dashboard.js"></script>
+{% endblock %}
